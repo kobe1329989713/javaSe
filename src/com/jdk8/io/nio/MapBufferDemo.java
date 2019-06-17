@@ -19,7 +19,7 @@ public class MapBufferDemo {
         String p = "D:\\kobe\\idea\\ideaProjects\\space01\\javaSE01\\src\\com\\jdk8\\io\\nio\\f2.txt";
         try(
                 final FileInputStream fis = new FileInputStream(p);
-                final FileChannel c = fis.getChannel();
+                final FileChannel c = fis.getChannel()
         ){
             final MappedByteBuffer mbb =
                     // 读取文件，从多少到多少。如果是比文件小说明，文件部分映射，

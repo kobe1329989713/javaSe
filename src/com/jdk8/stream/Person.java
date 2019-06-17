@@ -17,7 +17,7 @@ public class Person {
     private double income;
     private LocalDate birthDate;
 
-    public static enum Gender{
+    public enum Gender{
         MALE,FEMAEL
     }
     // 性别

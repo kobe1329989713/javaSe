@@ -56,7 +56,7 @@ public class FileChannelDemo {
         final ByteBuffer buffer = ByteBuffer.allocate(1024);
         try(
                 FileInputStream fis = new FileInputStream(path);
-                final FileChannel c = fis.getChannel();
+                final FileChannel c = fis.getChannel()
         ){
             final ByteBuffer buffer1 = ByteBuffer.allocate(1024);
             // 通道从 buffer 里面读取数据。

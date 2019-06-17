@@ -38,8 +38,8 @@ public class StringDemo1 {
         String s5 = "a" + "bc"; // 在编译时就已经确定了，所以它指向的还是 abc
         // 它直接在堆里面创建一个地址，指向常量池里面abc 对象。如果没有创建它，然后在指向它。
         // 它指向堆，在通过堆，去指向字符常量池。
-        String s2 = new String("abc");
-        String s3 = new String("abc");
+        String s2 = "abc";
+        String s3 = "abc";
         // 所以它输出false
         System.out.println(s1 == s2); // false
         System.out.println(s1 == s4); // true
@@ -50,8 +50,8 @@ public class StringDemo1 {
 
         // 而试题
         // 下面这个两个创建了，几个对象。三个。
-        String str1 = new String("hello");
-        String str2 = new String("hello");
+        String str1 = "hello";
+        String str2 = "hello";
         /**
          因为
          str1 它先在堆里面，创建一个 hello 对象，然后指向 字符常量池里面，但是字符常量池里面没有

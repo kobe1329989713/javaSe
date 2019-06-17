@@ -22,7 +22,7 @@ public class FileCopy {
         String target = "D:\\kobe\\xx\\jar\\xxx.tar.gz";
         try (
                 FileInputStream fis = new FileInputStream(source);
-                FileOutputStream fos = new FileOutputStream(target);
+                FileOutputStream fos = new FileOutputStream(target)
         ) {
             // 每次读取的数据，就缓存在这个数组里面。然后在把它写入到输出流里。
             byte[] data = new byte[2048];

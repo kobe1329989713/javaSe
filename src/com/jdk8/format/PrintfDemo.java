@@ -28,7 +28,7 @@ public class PrintfDemo {
         System.out.println("=");
 
         System.out.printf("%s", "a");
-        System.out.println("");
+        System.out.println();
 
         // 在前面补空格，来形成 四位的长度。
         System.out.printf("%4s", "a");

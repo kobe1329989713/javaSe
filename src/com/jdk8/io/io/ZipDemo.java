@@ -38,7 +38,7 @@ public class ZipDemo {
     private static void createZip(String p,String p1) {
         try (
                 ZipOutputStream zos = new ZipOutputStream(new FileOutputStream(p1));
-                BufferedInputStream bis = new BufferedInputStream(new FileInputStream(p));
+                BufferedInputStream bis = new BufferedInputStream(new FileInputStream(p))
         ) {
             // 设置压缩的级别。
             zos.setLevel(Deflater.BEST_COMPRESSION);
@@ -115,7 +115,7 @@ public class ZipDemo {
     // 查看这个压缩文件里面有那些文件（条目） 02
     public static void list02(String zipFile) {
         try (ZipFile f = new ZipFile(zipFile)) {
-            f.stream().forEach(enrty-> System.out.println(((ZipEntry) enrty).getName()));
+            f.stream().forEach(enrty-> System.out.println(enrty.getName()));
 
         } catch (IOException e) {
             e.printStackTrace();
