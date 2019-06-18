@@ -1,0 +1,24 @@
+<videos>
+
+    <!--
+        所以的 video 为子元素，所以只有一个子元素。
+        有7个子节点。注意，子元素与子节点。
+        换行和空格都是文本节点。
+
+        命名空间、有效性验证。
+    -->
+
+    <video id="v001" name="nameValue">
+        <title>跟kobe学打游戏</title>
+        <season>第一季</season>
+    </video>
+
+    <video id="v002">
+        <title>跟kobe学打游戏oracle</title>
+    </video>
+
+    <video id="v001">
+        <title>跟kobe学打游戏_XML</title>
+    </video>
+
+</videos>

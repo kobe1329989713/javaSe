@@ -1,0 +1,20 @@
+<!DOCTYPE videos[
+        <!ELEMENT videos (video*)>
+        <!ELEMENT video (title,season?)>
+        <!ATTLIST video id ID #REQUIRED>
+        <!ATTLIST video name CDATA #IMPLIED>
+        <!ELEMENT title (#PCDATA)>
+        <!ELEMENT season (#PCDATA)>
+]>
+<laotan:videos xmlns:laotan="http://www.laotan.com">
+    <laotan:video id="v001" name="nameValue">
+        <title>跟kobe学打游戏</title>
+        <season>第一季</season>
+    </laotan:video>
+    <laotan:video id="v002">
+        <title>跟kobe学打游戏oracle</title>
+    </laotan:video>
+    <laotan:video id="v003">
+        <title>跟kobe学打游戏_XML</title>
+    </laotan:video>
+</laotan:videos>
