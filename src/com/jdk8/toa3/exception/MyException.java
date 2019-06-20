@@ -10,6 +10,7 @@ package com.jdk8.toa3.exception;
  *
  */
 //           这里继承也可以是 RuntimeException 这样就可以想处理就处理不想处理就不处理。
+    // 可以不用显示处理异常。
 public class MyException extends Exception {
 
     // 异常肯定是需要打印异常信息的。所以你重写构造方法来到达然后调用父类里面的东东。

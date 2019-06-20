@@ -1,8 +1,6 @@
 package com.jdk8.toa3.exception;
 
 /**
- * Created by kobe on 2019/6/18.22:49
- * https://edu.51cto.com//center/course/lesson/index?id=45907
  *
  * @author kobe
  * <br/>
