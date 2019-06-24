@@ -1,5 +1,8 @@
 package com.jdk8.toa3.aop;
 
+import com.sun.istack.internal.NotNull;
+import com.sun.istack.internal.Nullable;
+
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
@@ -11,26 +14,32 @@ import java.lang.reflect.Proxy;
  * <br/>
  * Description:
  */
-interface Fiying{
+interface Fiying {
     void m1();
+
     int m2(int num);
 }
-class Swan implements Fiying{
+
+class Swan implements Fiying {
     @Override
     public void m1() {
         System.out.println("m1");
     }
+
     @Override
     public int m2(int num) {
         System.out.println("m2");
         return 0;
     }
 }
-class LogInvocationHandler implements InvocationHandler{
+
+class LogInvocationHandler implements InvocationHandler {
     private Object targe;
+
     public LogInvocationHandler(Object targe) {
         this.targe = targe;
     }
+
     // proxy 代理实例，method 代理那个方法。args 这个方法参数，返回值是那个代理方法的返回值。
     // 在调用它 之前、之中、之后、出现异常。 二什么。
     @Override
@@ -41,6 +50,7 @@ class LogInvocationHandler implements InvocationHandler{
         return result;
     }
 }
+
 public class TestProxy {
     public static void main(String[] args) {
         // 目标类。
