@@ -1,63 +1,58 @@
 
-set nowrapscan " ½ûÖ¹ÔÚËÑË÷µ½ÎÄ¼şÁ½¶ËÊ±ÖØĞÂËÑË÷
-set hlsearch " ËÑË÷Ê±ÏÔÊ¾¸ßÁÁ
+set nowrapscan " ç¦æ­¢åœ¨æœç´¢åˆ°æ–‡ä»¶ä¸¤ç«¯æ—¶é‡æ–°æœç´¢
+set hlsearch " æœç´¢æ—¶æ˜¾ç¤ºé«˜äº®
 set incsearch
 set ignorecase
 set smartcase
 set showmode
-set number " ÏÔÊ¾ĞĞºÅ
-set relativenumber " Ïà¶ÔĞĞºÅ
-set scrolloff=3 " ÄãÔÚĞ´Ê± Ê¼ÖÕÓĞÈıĞĞµÄÎ»ÖÃ£¬²»»áµ½×îµÍºÍ×î¶¥
+set number " æ˜¾ç¤ºè¡Œå·
+set relativenumber " ç›¸å¯¹è¡Œå·
+set scrolloff=3 " ä½ åœ¨å†™æ—¶ å§‹ç»ˆæœ‰ä¸‰è¡Œçš„ä½ç½®ï¼Œä¸ä¼šåˆ°æœ€ä½å’Œæœ€é¡¶
 set history=100000
-" Ñ¡Ïî¿¨²Ù×÷
+" é€‰é¡¹å¡æ“ä½œ
 nnoremap tn gt
 nnoremap tp gT
 
-
 " ==================================================
-" Í¨¹ı`£ºactionlist`ÏÔÊ¾ËùÓĞÌá¹©µÄ²Ù×÷
-" ²»ÒªĞŞ¸Äidea Ä¬ÈÏ¿ì½İ¼ü¡£idea·½Ïò¼ü£¬ÌáÊ¾¼ü(ÓÃÄ¬ÈÏ¿É·ñ)
+" é€šè¿‡`ï¼šactionlist`æ˜¾ç¤ºæ‰€æœ‰æä¾›çš„æ“ä½œ
+" ä¸è¦ä¿®æ”¹idea é»˜è®¤å¿«æ·é”®ã€‚ideaæ–¹å‘é”®ï¼Œæç¤ºé”®(ç”¨é»˜è®¤å¯å¦)
+" ç›´æ¥åœ¨idea é‡Œé¢æ˜ å°„å¥½äº†ï¼Œçœ‹åˆ°æ•ˆæœäº†ï¼Œåœ¨å†™åœ¨è¿™é‡Œæ¥ã€‚
 " ==================================================
 
-" (inoremap)²åÈëÄ£Ê½£¬nnoremap(ÃüÁîÄ£Ê½)
+" (inoremap)æ’å…¥æ¨¡å¼ï¼Œnnoremap(å‘½ä»¤æ¨¡å¼)
 " action EditorUp   action EditorDown
 
-" ÊµÏÖ½Ó¿ÚÓëÖØĞ´·½·¨¡£
-nnoremap ;i :action ImplementMethods<CR>
-nnoremap ;o :action OverrideMethods<CR>
+" å®ç°æ¥å£ä¸é‡å†™æ–¹æ³•ã€‚
+nnoremap <Leader>i :action ImplementMethods<CR>
+nnoremap <Leader>o :action OverrideMethods<CR>
 " ctrl + e
-nnoremap ;e :action RecentFiles<CR>
-" nnoremap ;ee :action ToggleChangedOnlyFiles<CR>
+nnoremap <Leader>e :action RecentFiles<CR>
 " ctrl + f
-nnoremap ;f :action Find<CR>
+nnoremap <Leader>f :action Find<CR>
 " ctrl + r
-nnoremap ;r :action Replace<CR>
+nnoremap <Leader>r :action Replace<CR>
 " ctrl + w
-nnoremap ;w :action EditorSelectWord<CR>
-" alt+v ÇĞ»»È«ÆÁ¡£
+nnoremap <Leader>w :action EditorSelectWord<CR>
+" alt+v åˆ‡æ¢å…¨å±ã€‚
 nnoremap <Leader>cv :action ChangeView<CR>
 " <F9>
 nnoremap <Space>cd :action ChooseDebugConfiguration<CR>
-" <C-S-F10>   ¼ÓSpace(¿Õ¸ñ)  
-nnoremap <Space>r :action RunClass<CR>
+" <C-S-F10>   åŠ Space(ç©ºæ ¼)
+nnoremap <Space>cr :action RunClass<CR>
 " <S-F9>
 nnoremap <Space>dr :action Debug<CR>
 " <C-F5>
-nnoremap <Space>cr :action Rerun<CR>
-" <A-Ins>
-nnoremap <Space>ai :action Generate<CR>
-" <A-Home>
-nnoremap <Space>ah :action ShowNavBar<CR>
+nnoremap <Space>r :action Rerun<CR>
 " <C-S-F12>
 nnoremap <Space>f :action HideAllWindows<CR>
 " <F12>
 nnoremap <Space>l :action JumpToLastWindow<CR>
 " <C-H>
-nnoremap <Space>ch :action TypeHierarchy<CR>
-" <C-F12> 
-nnoremap <Space>m :action FileStructurePopup<CR>
-" <A-J> ÔÚ°´+  
-nnoremap <Space>j :action SelectNextOccurrence<CR>
+nnoremap <Leader>ch :action TypeHierarchy<CR>
+" <C-F12>
+nnoremap <Leader>m :action FileStructurePopup<CR>
+" <A-J> åœ¨æŒ‰+
+nnoremap <Leader>j :action SelectNextOccurrence<CR>
 
 " <C-Q>
 nnoremap <Leader>q :action QuickJavaDoc<CR>
@@ -67,17 +62,10 @@ nnoremap <Leader>p :action ParameterInfo<CR>
 nnoremap <Leader>u :action GotoSuperMethod<CR>
 " <C-T>
 nnoremap <Leader>t :action Vcs.UpdateProject<CR>
-" <C-B> == <C-]>
-" nnoremap <Leader>b :action GotoDeclaration<CR>
 " <C-N>
-nnoremap <Space>n :action GotoClass<CR>
-" <F2>
-nnoremap <Space>e :action GotoNextError<CR>
-" <S-F2>
-nnoremap <Leader>e :action GotoPreviousError<CR>
-
-" <C-F2>
-" nnoremap <Leader>s :action Stop<CR>
+nnoremap <Leader>n :action GotoClass<CR>
+" <C-S-CR>
+nnoremap [ :action EditorCompleteStatement<CR>a
 
 
 
@@ -85,25 +73,21 @@ nnoremap <Leader>e :action GotoPreviousError<CR>
 
 
 
-
-" ÍË³övisualÄ£Ê½
+" é€€å‡ºvisualæ¨¡å¼
 " vnoremap v <Esc>
-" »Ö¸´ÉÏÒ»´Î²Ù×÷
+" æ¢å¤ä¸Šä¸€æ¬¡æ“ä½œ
 " nnoremap U <C-r>
-" ´ÓÄÇÀï¸´ÖÆµ½ĞĞÎ²¡£ 
+" ä»é‚£é‡Œå¤åˆ¶åˆ°è¡Œå°¾ã€‚
 " nnoremap Y y$
 
-" È¡Ïû¸ßÁÁ ¼ÓSpace(¿Õ¸ñ)
+" å–æ¶ˆé«˜äº® åŠ Space(ç©ºæ ¼)
 " nnoremap <Space>sc :nohlsearch<CR>
-" Ğ´Èë(±£´æ) ##
+" å†™å…¥(ä¿å­˜) ##
 " nnoremap <Space>fs :w<CR>
-" ÍË³öÕı³£Ä£Ê½  ##
+" é€€å‡ºæ­£å¸¸æ¨¡å¼  ##
 " nnoremap <Space>q  :q<CR>
 " nnoremap <Space>Q  :qa!<CR>
-" ÒÆ¶¯°ëÒ³¸ü¿ì  ##
-" nnoremap <Space>d  <C-d>
-" nnoremap <Space>u  <C-u>
-" ²åÈëÄ£Ê½¿ì½İ¼ü
+" æ’å…¥æ¨¡å¼å¿«æ·é”®
 " inoremap <C-h> <Left>
 " inoremap <C-j> <Down>
 " inoremap <C-k> <Up>
@@ -111,24 +95,24 @@ nnoremap <Leader>e :action GotoPreviousError<CR>
 " inoremap <C-a> <Home>
 " inoremap <C-e> <End>
 " inoremap <C-d> <Delete>
-" ÍË³ö²åÈëÄ£Ê½  ##
+" é€€å‡ºæ’å…¥æ¨¡å¼  ##
 " inoremap jj <Esc>
 " inoremap jk <Esc>
 " inoremap kk <Esc>
-" ÒÆµ½¶ÓÎéµÄ¿ªÊ¼  ##
+" ç§»åˆ°é˜Ÿä¼çš„å¼€å§‹  ##
 " nnoremap H ^
-" ÒÆ¶¯µ½ĞĞÎ²  ##
+" ç§»åŠ¨åˆ°è¡Œå°¾  ##
 " nnoremap L $
-" ´°¿ÚµÄ²Ù×÷  ##
+" çª—å£çš„æ“ä½œ  ##
 " nnoremap <Space>ww <C-W>w
-" È«²¿¹Ø±Õ¡£ ##
+" å…¨éƒ¨å…³é—­ã€‚ ##
 " nnoremap <Space>wd <C-W>c
-" ÒÆ¶¯µ½´°¿Ú  ##
+" ç§»åŠ¨åˆ°çª—å£  ##
 " nnoremap <Space>wj <C-W>j
 " nnoremap <Space>wk <C-W>k
 " nnoremap <Space>wh <C-W>h
 " nnoremap <Space>wl <C-W>l
-" split·ÖÆÁ¡£ ##
+" splitåˆ†å±ã€‚ ##
 " nnoremap <Space>ws <C-W>s
 " nnoremap <Space>w- <C-W>s
 " nnoremap <Space>wv <C-W>v
@@ -136,84 +120,98 @@ nnoremap <Leader>e :action GotoPreviousError<CR>
 
 
 " ==================================================
-" Í¨¹ı`£ºactionlist`ÏÔÊ¾ËùÓĞÌá¹©µÄ²Ù×÷
+" é€šè¿‡`ï¼šactionlist`æ˜¾ç¤ºæ‰€æœ‰æä¾›çš„æ“ä½œ
 " ==================================================
 
 
-" µ«±£ÁôideavimËÑË÷ ÊÇ \/
+" ä½†ä¿ç•™ideavimæœç´¢ æ˜¯ \/
 " nnoremap <Leader>/ /
-
-" ÏÔÊ¾ÎÄ¼şÂ·¾¶
+" <A-Ins>
+" nnoremap <Leader>ai :action Generate<CR>
+" <A-Home>
+" nnoremap <Leader>ah :action ShowNavBar<CR>
+" æ˜¾ç¤ºæ–‡ä»¶è·¯å¾„
 " nnoremap <Leader>fp :action ShowFilePath<CR>
-" ÖğĞĞ×¢ÊÍ  ##
+" é€è¡Œæ³¨é‡Š  ##
 " nnoremap <Leader>;; :action CommentByLineComment<CR>
-" ÇĞ»»Ïß¶Ïµã 
+" åˆ‡æ¢çº¿æ–­ç‚¹
 " nnoremap <Leader>bb :action ToggleLineBreakpoint<CR>
-" ²é¿´¶Ïµã
+" æŸ¥çœ‹æ–­ç‚¹
 " nnoremap <Leader>br :action ViewBreakpoints<CR>
 " ctrl+shift+a
 " nnoremap ga :action GotoAction<CR>
 " ctrl+shift+n
 " nnoremap gf :action GotoFile<CR>
-" ×ªµ½ÊµÏÖ
+" è½¬åˆ°å®ç°
 " nnoremap gi :action GotoImplementation<CR>
 " ctrl+shift+a
 " nnoremap gs :action GotoSymbol<CR>
-" 
+"
 " nnoremap <Leader>ga :action GotoAction<CR>
-" 
+"
 " nnoremap <Leader>gc :action GotoClass<CR>
 
 " nnoremap <Leader>gf :action GotoFile<CR>
-" 
+"
 " nnoremap <Leader>gi :action GotoImplementation<CR>
-" 
+"
 " nnoremap <Leader>gs :action GotoSymbol<CR>
-" 
+"
 " nnoremap <Leader>gt :action GotoTest<CR>
-
-" ¼ì²é´úÂë
+" ç§»åŠ¨åŠé¡µæ›´å¿«
+" nnoremap <Space>d  <C-d>
+" nnoremap <Space>u  <C-u>
+" nnoremap <Space>f  <C-u>
+" nnoremap <Space>b  <C-u>
+" æ£€æŸ¥ä»£ç 
 " nnoremap <Leader>ic :action InspectCode<CR>
-" ¼¤»îMavenÏîÄ¿¹¤¾ß´°¿Ú
+" æ¿€æ´»Mavené¡¹ç›®å·¥å…·çª—å£
 " nnoremap <Leader>mv :action ActivateMavenProjectsToolWindow<CR>
-" ÓÅ»¯½ø¿Ú
+" ä¼˜åŒ–è¿›å£
 " nnoremap <Leader>oi :action OptimizeImports<CR>
-" ÏÔÊ¾Ãñ´â²Ëµ¥
+" æ˜¾ç¤ºæ°‘ç²¹èœå•
 " nnoremap <Leader>pm :action ShowPopupMenu<CR>
-" ÔËĞĞµ½¹â±ê
+" è¿è¡Œåˆ°å…‰æ ‡
 " nnoremap <Leader>rc :action RunToCursor<CR>
-" Ñ¡ÔñÔËĞĞÅäÖÃ
+" é€‰æ‹©è¿è¡Œé…ç½®
 " nnoremap <Leader>rC :action ChooseRunConfiguration<CR>
-" ÖØÃüÃûÔªËØ
+" é‡å‘½åå…ƒç´ 
 " nnoremap <Leader>re :action RenameElement<CR>
-" ÖØÃüÃûÎÄ¼ş
+" é‡å‘½åæ–‡ä»¶
 " nnoremap <Leader>rf :action RenameFile<CR>
-" ÖØĞÂÔËĞĞ
+" é‡æ–°è¿è¡Œ
 " nnoremap <Leader>rr :action Rerun<CR>
-" µ½´¦Ñ°ÕÒ
+" åˆ°å¤„å¯»æ‰¾
 " nnoremap <Leader>se :action SearchEverywhere<CR>
-" ÏÔÊ¾ÓÃ·¨
+" æ˜¾ç¤ºç”¨æ³•
 " nnoremap <Leader>su :action ShowUsages<CR>
-" ¹Ø±Õ»î¶¯Ñ¡Ïî¿¨
+" å…³é—­æ´»åŠ¨é€‰é¡¹å¡
 " nnoremap <Leader>tc :action CloseActiveTab<CR>
-" ½øÈë
+" è¿›å…¥
 " nnoremap <Leader>si :action StepInto<CR>
-" ÇĞ»»Ïß¶Ïµã
+" åˆ‡æ¢çº¿æ–­ç‚¹
 " nnoremap <Leader>tb :action ToggleLineBreakpoint<CR>
-" ¼¤»îÖÕ¶Ë¹¤¾ß´°¿Ú
+" æ¿€æ´»ç»ˆç«¯å·¥å…·çª—å£
 " nnoremap <Leader>tl Vy<CR>:action ActivateTerminalToolWindow<CR>
-" ×ª»»¼¤»îÖÕ¶Ë¹¤¾ß´°¿Ú
+" è½¬æ¢æ¿€æ´»ç»ˆç«¯å·¥å…·çª—å£
 " vnoremap <Leader>tl y<CR>:action ActivateTerminalToolWindow<CR>
 
-" <F5>  
+" <F5>
 " nnoremap <Space>p :action CopyElement<CR>
-" <F6> 
+" <F6>
 " nnoremap <Space>p :action Move<CR>
-" <A-S-J> -  
+" <A-S-J> -
 " nnoremap <Space>asj :action UnselectPreviousOccurrence<CR>
 " <A-S-J> all
 " nnoremap <Space>casj :action SelectAllOccurrences<CR>
 " <A-C-S-T>
 " nnoremap <Space>acst :action Refactorings.QuickListPopupAction<CR>
-" <C-S-CR>
-" nnoremap <Space>[ :action EditorCompleteStatement<CR>
+" <C-B> == <C-]>
+" nnoremap <Leader>b :action GotoDeclaration<CR>
+" <C-F2>
+" nnoremap <Leader>s :action Stop<CR>
+" <F2>
+" nnoremap <Space>e :action GotoNextError<CR>
+" <S-F2>
+" nnoremap <Leader>e :action GotoPreviousError<CR>
+" nnoremap ;ee :action ToggleChangedOnlyFiles<CR>
