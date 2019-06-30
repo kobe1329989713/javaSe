@@ -9,12 +9,13 @@ set number " 显示行号
 set relativenumber " 相对行号
 set scrolloff=3 " 你在写时 始终有三行的位置，不会到最低和最顶
 set history=100000
+set clipboard+=unnamed "与系统共享剪切板
 " 选项卡操作
 nnoremap tn gt
 nnoremap tp gT
 
 " ==================================================
-" 通过`：actionlist`显示所有提供的操作
+" 通过`：actionlist`显示所有提供的操作 1
 " 不要修改idea 默认快捷键。idea方向键，提示键(用默认可否)
 " 直接在idea 里面映射好了，看到效果了，在写在这里来。
 " ==================================================
@@ -73,6 +74,14 @@ nnoremap [ :action EditorCompleteStatement<CR>a
 
 
 
+
+
+" <C-C>
+" nnoremap Y :action $Copy<CR>
+" <C-V>
+" nnoremap <Space>v :action $Paste<CR>
+" <C-S-V>
+" nnoremap <Space>av :action PasteMultiple<CR>
 " 退出visual模式
 " vnoremap v <Esc>
 " 恢复上一次操作
