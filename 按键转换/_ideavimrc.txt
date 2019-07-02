@@ -15,7 +15,7 @@ nnoremap tn gt
 nnoremap tp gT
 
 " ==================================================
-" 通过`：actionlist`显示所有提供的操作 3
+" 通过`：actionlist`显示所有提供的操作 4
 " 不要修改idea 默认快捷键。idea方向键，提示键(用默认可否)
 " 直接在idea 里面映射好了，看到效果了，在写在这里来。
 " ==================================================
@@ -23,10 +23,20 @@ nnoremap tp gT
 " (inoremap)插入模式，nnoremap(命令模式)
 " action EditorUp   action EditorDown
 
+" 退出visual模式
+vnoremap v <Esc>
 " 实现接口与重写方法。
 nnoremap <Leader>i :action ImplementMethods<CR>
 nnoremap <Leader>o :action OverrideMethods<CR>
-
+nnoremap <C-a> ggVG
+" split分屏
+nnoremap <Space>ws <C-W>s
+nnoremap <Space>wv <C-W>v
+" 移动到窗口  ##
+nnoremap <Space>wj <C-W>j
+nnoremap <Space>wk <C-W>k
+nnoremap <Space>wh <C-W>h
+nnoremap <Space>wl <C-W>l
 " ctrl + f
 nnoremap <Leader>f :action Find<CR>
 " ctrl + r
@@ -58,7 +68,7 @@ nnoremap [ :action EditorCompleteStatement<CR>a
 " Ctrl+Alt+F12 在文件夹中显示
 nnoremap <Leader>fp :action ShowFilePath<CR>
 
-
+" 触发鼠标右键。直接按
 
 
 
@@ -84,8 +94,7 @@ nnoremap <Leader>fp :action ShowFilePath<CR>
 " nnoremap <Space>v :action $Paste<CR>
 " <C-S-V>
 " nnoremap <Space>av :action PasteMultiple<CR>
-" 退出visual模式
-" vnoremap v <Esc>
+
 " 恢复上一次操作
 " nnoremap U <C-r>
 " 从那里复制到行尾。
@@ -118,15 +127,8 @@ nnoremap <Leader>fp :action ShowFilePath<CR>
 " nnoremap <Space>ww <C-W>w
 " 全部关闭。 ##
 " nnoremap <Space>wd <C-W>c
-" 移动到窗口  ##
-" nnoremap <Space>wj <C-W>j
-" nnoremap <Space>wk <C-W>k
-" nnoremap <Space>wh <C-W>h
-" nnoremap <Space>wl <C-W>l
 " split分屏。 ##
-" nnoremap <Space>ws <C-W>s
 " nnoremap <Space>w- <C-W>s
-" nnoremap <Space>wv <C-W>v
 " nnoremap <Space>w\| <C-W>v
 
 
