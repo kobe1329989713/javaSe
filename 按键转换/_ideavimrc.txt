@@ -15,7 +15,7 @@ nnoremap tn gt
 nnoremap tp gT
 
 " ==================================================
-" 通过`：actionlist`显示所有提供的操作 2
+" 通过`：actionlist`显示所有提供的操作 3
 " 不要修改idea 默认快捷键。idea方向键，提示键(用默认可否)
 " 直接在idea 里面映射好了，看到效果了，在写在这里来。
 " ==================================================
@@ -26,8 +26,7 @@ nnoremap tp gT
 " 实现接口与重写方法。
 nnoremap <Leader>i :action ImplementMethods<CR>
 nnoremap <Leader>o :action OverrideMethods<CR>
-" ctrl + e
-nnoremap <Leader>e :action RecentFiles<CR>
+
 " ctrl + f
 nnoremap <Leader>f :action Find<CR>
 " ctrl + r
@@ -50,24 +49,12 @@ nnoremap <Space>f :action HideAllWindows<CR>
 nnoremap <Space>l :action JumpToLastWindow<CR>
 " <C-H>
 nnoremap <Leader>ch :action TypeHierarchy<CR>
-" <C-F12>
-nnoremap <Leader>m :action FileStructurePopup<CR>
 " <A-J> 在按+
 nnoremap <Leader>j :action SelectNextOccurrence<CR>
-
-" <C-Q>
-nnoremap <Leader>q :action QuickJavaDoc<CR>
-" <C-P>
-nnoremap <Leader>p :action ParameterInfo<CR>
 " <C-U>
 nnoremap <Leader>u :action GotoSuperMethod<CR>
-" <C-T>
-nnoremap <Leader>t :action Vcs.UpdateProject<CR>
-" <C-N>
-nnoremap <Leader>n :action GotoClass<CR>
 " <C-S-CR>
 nnoremap [ :action EditorCompleteStatement<CR>a
-
 " Ctrl+Alt+F12 在文件夹中显示
 nnoremap <Leader>fp :action ShowFilePath<CR>
 
@@ -79,6 +66,18 @@ nnoremap <Leader>fp :action ShowFilePath<CR>
 
 
 
+" <C-N>
+" nnoremap <Leader>n :action GotoClass<CR>
+" <C-T>
+" nnoremap <Leader>t :action Vcs.UpdateProject<CR>
+" <C-P>
+" nnoremap <Leader>p :action ParameterInfo<CR>
+" <C-Q>
+" nnoremap <Leader>q :action QuickJavaDoc<CR>
+" ctrl + e
+" nnoremap <Leader>e :action RecentFiles<CR>
+" <C-F12>
+" nnoremap <Leader>m :action FileStructurePopup<CR>
 " <C-C>
 " nnoremap Y :action $Copy<CR>
 " <C-V>
