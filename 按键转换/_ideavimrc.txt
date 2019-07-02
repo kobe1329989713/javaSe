@@ -15,7 +15,7 @@ nnoremap tn gt
 nnoremap tp gT
 
 " ==================================================
-" 通过`：actionlist`显示所有提供的操作 1
+" 通过`：actionlist`显示所有提供的操作 2
 " 不要修改idea 默认快捷键。idea方向键，提示键(用默认可否)
 " 直接在idea 里面映射好了，看到效果了，在写在这里来。
 " ==================================================
@@ -67,6 +67,9 @@ nnoremap <Leader>t :action Vcs.UpdateProject<CR>
 nnoremap <Leader>n :action GotoClass<CR>
 " <C-S-CR>
 nnoremap [ :action EditorCompleteStatement<CR>a
+
+" Ctrl+Alt+F12 在文件夹中显示
+nnoremap <Leader>fp :action ShowFilePath<CR>
 
 
 
@@ -132,15 +135,16 @@ nnoremap [ :action EditorCompleteStatement<CR>a
 " 通过`：actionlist`显示所有提供的操作
 " ==================================================
 
-
+" <C-G>
+" nnoremap <Leader>g :action GotoLine<CR>
 " 但保留ideavim搜索 是 \/
 " nnoremap <Leader>/ /
 " <A-Ins>
 " nnoremap <Leader>ai :action Generate<CR>
 " <A-Home>
 " nnoremap <Leader>ah :action ShowNavBar<CR>
-" 显示文件路径
-" nnoremap <Leader>fp :action ShowFilePath<CR>
+" <S-F1> 打开外部文档
+" nnoremap <Leader>sf :action ExternalJavaDoc<CR>
 " 逐行注释  ##
 " nnoremap <Leader>;; :action CommentByLineComment<CR>
 " 切换线断点
@@ -224,3 +228,4 @@ nnoremap [ :action EditorCompleteStatement<CR>a
 " <S-F2>
 " nnoremap <Leader>e :action GotoPreviousError<CR>
 " nnoremap ;ee :action ToggleChangedOnlyFiles<CR>
+
