@@ -14,20 +14,6 @@ set clipboard+=unnamed "与系统共享剪切板
 nnoremap tn gt
 nnoremap tp gT
 
-" ==================================================
-" 通过`：actionlist`显示所有提供的操作 4
-" 不要修改idea 默认快捷键。idea方向键，提示键(用默认可否)
-" 直接在idea 里面映射好了，看到效果了，在写在这里来。
-" ==================================================
-
-" (inoremap)插入模式，nnoremap(命令模式)
-" action EditorUp   action EditorDown
-
-" 退出visual模式
-vnoremap v <Esc>
-" 实现接口与重写方法。
-nnoremap <Leader>i :action ImplementMethods<CR>
-nnoremap <Leader>o :action OverrideMethods<CR>
 nnoremap <C-a> ggVG
 " split分屏
 nnoremap <Space>ws <C-W>s
@@ -37,45 +23,113 @@ nnoremap <Space>wj <C-W>j
 nnoremap <Space>wk <C-W>k
 nnoremap <Space>wh <C-W>h
 nnoremap <Space>wl <C-W>l
-" ctrl + f
-nnoremap <Leader>f :action Find<CR>
-" ctrl + r
-nnoremap <Leader>r :action Replace<CR>
-" ctrl + w
-nnoremap <Leader>w :action EditorSelectWord<CR>
-" alt+v 切换全屏。
-nnoremap <Leader>cv :action ChangeView<CR>
-" <F9>
-nnoremap <Space>cd :action ChooseDebugConfiguration<CR>
+" <c-f> <c-b> 可用idea alt+ 上下光标
+nnoremap <Leader>f <C-f>
+nnoremap <Leader>b <C-b>
+nnoremap <Leader>d <C-d>
+nnoremap <Leader>u <C-u>
+" 恢复上一次操作
+nnoremap U <C-r>
+" 从那里复制到行尾。
+nnoremap Y y$
+
+
+
+
+
+" ==================================================
+" 通过`：actionlist`显示所有提供的操作 4
+" 直接在idea 里面映射好了，看到效果了，在写在这里来。
+" nnoremap(普通模式)
+" vnoremap(可视模式)
+" inoremap(插入模式)，
+" cnoremap(命令行模式)
+" onoremap(等待模式)
+" 前面两个有效，其它没有用。
+" ==================================================
+
+" Ctrl+Shift+M 在 {} 切换
+nnoremap z[ :action EditorMatchBrace<CR>
+" 实现接口与重写方法。
+nnoremap <Leader>i :action ImplementMethods<CR>
+nnoremap <Leader>o :action OverrideMethods<CR>
+
+
+
+" 实现接口与重写方法。
+nnoremap <Leader>i :action ImplementMethods<CR>
+nnoremap <Leader>o :action OverrideMethods<CR>
+" <A-J> 在按+
+nnoremap <Leader>j :action SelectNextOccurrence<CR>
+" <A-S-J> 在按-
+nnoremap <Leader>jk :action UnselectPreviousOccurrence<CR>
+
 " <C-S-F10>   加Space(空格)
 nnoremap <Space>cr :action RunClass<CR>
 " <S-F9>
 nnoremap <Space>dr :action Debug<CR>
 " <C-F5>
 nnoremap <Space>r :action Rerun<CR>
-" <C-S-F12>
-nnoremap <Space>f :action HideAllWindows<CR>
-" <F12>
-nnoremap <Space>l :action JumpToLastWindow<CR>
-" <C-H>
-nnoremap <Leader>ch :action TypeHierarchy<CR>
-" <A-J> 在按+
-nnoremap <Leader>j :action SelectNextOccurrence<CR>
-" <C-U>
-nnoremap <Leader>u :action GotoSuperMethod<CR>
 " <C-S-CR>
 nnoremap [ :action EditorCompleteStatement<CR>a
+" <A-Up> alt+ 上下光标
+nnoremap <Space>k :action MethodUp<CR>
+" <A-Down>
+nnoremap <Space>j :action MethodDown<CR>
+" <C-S-F12> 全屏
+nnoremap <Space>f :action HideAllWindows<CR>
+
+
+
+
+" <C-F12>
+vnoremap m :action FileStructurePopup<CR>
+" <F2>
+vnoremap n :action GotoNextError<CR>
+" <S-F2>
+vnoremap sp :action GotoPreviousError<CR>
+" <C-F1>
+vnoremap d :action ShowErrorDescription<CR>
+" alt+v 切换全屏。
+vnoremap cv :action ChangeView<CR>
+" <C-S-Del> ,删除 if 循环 () {} 里面的东东。
+vnoremap D :action Unwrap<CR>
+" <A-Ins>
+vnoremap ai :action Generate<CR>
+" <A-Home>
+vnoremap ah :action ShowNavBar<CR>
+" <A-C-S-T>
+vnoremap T :action Refactorings.QuickListPopupAction<CR>
 " Ctrl+Alt+F12 在文件夹中显示
-nnoremap <Leader>fp :action ShowFilePath<CR>
+vnoremap fb :action ShowFilePath<CR>
+" <F9>
+vnoremap cd :action ChooseDebugConfiguration<CR>
+" <F12> 返回上一个窗口。
+vnoremap l :action JumpToLastWindow<CR>
+" 本地历史记录
+vnoremap h :action LocalHistory<CR>
 
-" 触发鼠标右键。直接按
+" 重构提取变量那些没有了
+" 不能右键打开菜单。
+" 触发鼠标右键。直接按 show Context Menu,没有显示历史
+" 不能停止 <C-F2>
+" 折叠
 
 
 
 
 
 
-
+" ctrl + r
+" nnoremap <Leader>r :action Replace<CR>
+" ctrl + f
+" nnoremap <Leader>f :action Find<CR>
+" <C-H>
+" nnoremap <Leader>ch :action TypeHierarchy<CR>
+" <C-U>
+" nnoremap <Leader>u :action GotoSuperMethod<CR>
+" ctrl + w
+" nnoremap <Leader>w :action EditorSelectWord<CR>
 " <C-N>
 " nnoremap <Leader>n :action GotoClass<CR>
 " <C-T>
@@ -86,20 +140,12 @@ nnoremap <Leader>fp :action ShowFilePath<CR>
 " nnoremap <Leader>q :action QuickJavaDoc<CR>
 " ctrl + e
 " nnoremap <Leader>e :action RecentFiles<CR>
-" <C-F12>
-" nnoremap <Leader>m :action FileStructurePopup<CR>
 " <C-C>
 " nnoremap Y :action $Copy<CR>
 " <C-V>
 " nnoremap <Space>v :action $Paste<CR>
 " <C-S-V>
 " nnoremap <Space>av :action PasteMultiple<CR>
-
-" 恢复上一次操作
-" nnoremap U <C-r>
-" 从那里复制到行尾。
-" nnoremap Y y$
-
 " 取消高亮 加Space(空格)
 " nnoremap <Space>sc :nohlsearch<CR>
 " 写入(保存) ##
@@ -107,6 +153,8 @@ nnoremap <Leader>fp :action ShowFilePath<CR>
 " 退出正常模式  ##
 " nnoremap <Space>q  :q<CR>
 " nnoremap <Space>Q  :qa!<CR>
+" 退出visual模式
+" vnoremap v <Esc>
 " 插入模式快捷键
 " inoremap <C-h> <Left>
 " inoremap <C-j> <Down>
@@ -130,20 +178,13 @@ nnoremap <Leader>fp :action ShowFilePath<CR>
 " split分屏。 ##
 " nnoremap <Space>w- <C-W>s
 " nnoremap <Space>w\| <C-W>v
-
-
 " ==================================================
 " 通过`：actionlist`显示所有提供的操作
 " ==================================================
-
 " <C-G>
 " nnoremap <Leader>g :action GotoLine<CR>
 " 但保留ideavim搜索 是 \/
 " nnoremap <Leader>/ /
-" <A-Ins>
-" nnoremap <Leader>ai :action Generate<CR>
-" <A-Home>
-" nnoremap <Leader>ah :action ShowNavBar<CR>
 " <S-F1> 打开外部文档
 " nnoremap <Leader>sf :action ExternalJavaDoc<CR>
 " 逐行注释  ##
@@ -164,7 +205,6 @@ nnoremap <Leader>fp :action ShowFilePath<CR>
 " nnoremap <Leader>ga :action GotoAction<CR>
 "
 " nnoremap <Leader>gc :action GotoClass<CR>
-
 " nnoremap <Leader>gf :action GotoFile<CR>
 "
 " nnoremap <Leader>gi :action GotoImplementation<CR>
@@ -209,7 +249,6 @@ nnoremap <Leader>fp :action ShowFilePath<CR>
 " nnoremap <Leader>tl Vy<CR>:action ActivateTerminalToolWindow<CR>
 " 转换激活终端工具窗口
 " vnoremap <Leader>tl y<CR>:action ActivateTerminalToolWindow<CR>
-
 " <F5>
 " nnoremap <Space>p :action CopyElement<CR>
 " <F6>
@@ -218,15 +257,12 @@ nnoremap <Leader>fp :action ShowFilePath<CR>
 " nnoremap <Space>asj :action UnselectPreviousOccurrence<CR>
 " <A-S-J> all
 " nnoremap <Space>casj :action SelectAllOccurrences<CR>
-" <A-C-S-T>
-" nnoremap <Space>acst :action Refactorings.QuickListPopupAction<CR>
 " <C-B> == <C-]>
 " nnoremap <Leader>b :action GotoDeclaration<CR>
-" <C-F2>
-" nnoremap <Leader>s :action Stop<CR>
-" <F2>
-" nnoremap <Space>e :action GotoNextError<CR>
-" <S-F2>
-" nnoremap <Leader>e :action GotoPreviousError<CR>
 " nnoremap ;ee :action ToggleChangedOnlyFiles<CR>
-
+" 之前插入的位置 ctrl+i/o
+" nnoremap g; :action Back<CR>
+" nnoremap g, :action Forward<CR>
+" ctrl+ 上下光标 移动时，光标不会动，ctrl+m 又回到那一行上。
+" nnoremap zk :action EditorScrollUp<CR>
+" nnoremap zj :action EditorScrollDown<CR>
