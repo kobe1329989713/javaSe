@@ -10,9 +10,6 @@ set relativenumber " 相对行号
 set scrolloff=3 " 你在写时 始终有三行的位置，不会到最低和最顶
 set history=100000
 set clipboard+=unnamed "与系统共享剪切板
-" 选项卡操作
-nnoremap tn gt
-nnoremap tp gT
 
 nnoremap <C-a> ggVG
 " split分屏
@@ -52,6 +49,12 @@ nnoremap Y y$
 nnoremap z[ :action EditorMatchBrace<CR>
 
 
+" 选项卡操作
+nnoremap tn gt
+nnoremap tp gT
+" <C-Tab><C-E>
+nnoremap <Space>e :action Switcher<CR>
+
 
 
 " 实现接口与重写方法。
@@ -76,7 +79,6 @@ nnoremap <Space>k :action MethodUp<CR>
 nnoremap <Space>j :action MethodDown<CR>
 " <C-S-F12> 全屏
 nnoremap <Space>f :action HideAllWindows<CR>
-
 
 
 
