@@ -50,9 +50,7 @@ nnoremap Y y$
 
 " Ctrl+Shift+M 在 {} 切换
 nnoremap z[ :action EditorMatchBrace<CR>
-" 实现接口与重写方法。
-nnoremap <Leader>i :action ImplementMethods<CR>
-nnoremap <Leader>o :action OverrideMethods<CR>
+
 
 
 
@@ -105,9 +103,8 @@ vnoremap fb :action ShowFilePath<CR>
 " <F9>
 vnoremap cd :action ChooseDebugConfiguration<CR>
 " <F12> 返回上一个窗口。
-vnoremap l :action JumpToLastWindow<CR>
-" 本地历史记录
-vnoremap h :action LocalHistory<CR>
+vnoremap ; :action JumpToLastWindow<CR>
+
 
 " 重构提取变量那些没有了
 " 不能右键打开菜单。
