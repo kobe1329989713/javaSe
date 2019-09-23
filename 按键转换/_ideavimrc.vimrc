@@ -42,7 +42,7 @@ nnoremap Y y$
 " inoremap(插入模式)，
 " cnoremap(命令行模式)
 " onoremap(等待模式)
-" 前面两个有效，其它没有用。下光标= alt+i
+" 四个方向加alt， alt+j = alt+i
 " ==================================================
 
 " Ctrl+Shift+M 在 {} 切换
