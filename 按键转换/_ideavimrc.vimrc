@@ -1,4 +1,5 @@
-
+" insert 换。
+set keep-english-in-normal-and-restore-in-insert
 set nowrapscan " 禁止在搜索到文件两端时重新搜索
 set hlsearch " 搜索时显示高亮
 set incsearch
@@ -52,8 +53,7 @@ nnoremap z[ :action EditorMatchBrace<CR>
 " 选项卡操作
 nnoremap tn gt
 nnoremap tp gT
-" <C-Tab><C-E>
-nnoremap <Space>e :action Switcher<CR>
+
 
 
 
@@ -84,29 +84,17 @@ nnoremap <Space>f :action HideAllWindows<CR>
 
 " <C-F12>
 vnoremap m :action FileStructurePopup<CR>
-" <F2>
-vnoremap n :action GotoNextError<CR>
-" <S-F2>
-vnoremap sp :action GotoPreviousError<CR>
-" <C-F1>
-vnoremap d :action ShowErrorDescription<CR>
-" alt+v 切换全屏。
-vnoremap cv :action ChangeView<CR>
 " <C-S-Del> ,删除 if 循环 () {} 里面的东东。
 vnoremap D :action Unwrap<CR>
 " <A-Ins>
 vnoremap ai :action Generate<CR>
 " <A-Home>
 vnoremap ah :action ShowNavBar<CR>
-" <A-C-S-T>
-vnoremap T :action Refactorings.QuickListPopupAction<CR>
-" Ctrl+Alt+F12 在文件夹中显示
-vnoremap fb :action ShowFilePath<CR>
-" <F9>
-vnoremap cd :action ChooseDebugConfiguration<CR>
 " <F12> 返回上一个窗口。
 vnoremap ; :action JumpToLastWindow<CR>
 
+" Ctrl+Alt+F12 在文件夹中显示
+vnoremap fb :action ShowFilePath<CR>
 
 " 重构提取变量那些没有了
 " 不能右键打开菜单。
@@ -119,6 +107,18 @@ vnoremap ; :action JumpToLastWindow<CR>
 
 
 
+" <F2>
+" vnoremap n :action GotoNextError<CR>
+" <S-F2>
+" vnoremap sp :action GotoPreviousError<CR>
+" <C-F1>
+" vnoremap d :action ShowErrorDescription<CR>
+" alt+v 切换全屏。
+" vnoremap cv :action ChangeView<CR>
+" <F9>
+" vnoremap cd :action ChooseDebugConfiguration<CR>
+" <A-C-S-T>
+" vnoremap T :action Refactorings.QuickListPopupAction<CR>
 " ctrl + r
 " nnoremap <Leader>r :action Replace<CR>
 " ctrl + f
@@ -265,3 +265,5 @@ vnoremap ; :action JumpToLastWindow<CR>
 " ctrl+ 上下光标 移动时，光标不会动，ctrl+m 又回到那一行上。
 " nnoremap zk :action EditorScrollUp<CR>
 " nnoremap zj :action EditorScrollDown<CR>
+" <C-Tab><C-E>
+" nnoremap <Space>e :action Switcher<CR>
