@@ -40,16 +40,7 @@ nnoremap tn gt
 nnoremap tp gT
 
 
-
-
-" 实现接口与重写方法。
-nnoremap <Leader>i :action ImplementMethods<CR>
-nnoremap <Leader>o :action OverrideMethods<CR>
-" <A-J> 在按+
-nnoremap <Leader>j :action SelectNextOccurrence<CR>
-" <A-S-J> 在按-
-nnoremap <Leader>jk :action UnselectPreviousOccurrence<CR>
-
+" ============= 空格 ============= 
 " <C-S-F10>   加Space(空格)
 nnoremap <Space>cr :action RunClass<CR>
 " <S-F9>
@@ -72,8 +63,13 @@ nnoremap <Space>n :action GotoNextError<CR>
 nnoremap <Space>N :action GotoPreviousError<CR>
 " <C-F1>
 nnoremap <Space>s :action ShowErrorDescription<CR>
+" 实现接口与重写方法。
+nnoremap <Space>i :action ImplementMethods<CR>
+nnoremap <Space>o :action OverrideMethods<CR>
 
 
+
+" ============= v ============= 
 " <C-F12>
 vnoremap m :action FileStructurePopup<CR>
 " <C-S-Del> ,删除 if 循环 () {} 里面的东东。
@@ -84,5 +80,11 @@ vnoremap ai :action Generate<CR>
 vnoremap ah :action ShowNavBar<CR>
 " Ctrl+Alt+F12 在文件夹中显示
 vnoremap fb :action ShowFilePath<CR>
+
+
+
+
+" ============= \ ============= 
 " 转换激活终端工具窗口
-vnoremap c :action ActivateTerminalToolWindow<CR>
+nnoremap <Leader>c :action ActivateTerminalToolWindow<CR>
+
