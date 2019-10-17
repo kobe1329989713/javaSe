@@ -42,8 +42,7 @@ nnoremap <Leader>jk :action UnselectPreviousOccurrence<CR>
 " vnoremap d :action ShowErrorDescription<CR>
 " alt+v 切换全屏。
 " vnoremap cv :action ChangeView<CR>
-" <F9>
-" vnoremap cd :action ChooseDebugConfiguration<CR>
+
 " <A-C-S-T>
 " vnoremap T :action Refactorings.QuickListPopupAction<CR>
 " ctrl + r

@@ -1,8 +1,5 @@
 package com.jdk8.toa3.aop;
 
-import com.sun.istack.internal.NotNull;
-import com.sun.istack.internal.Nullable;
-
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
@@ -12,7 +9,7 @@ import java.lang.reflect.Proxy;
  *
  * @author kobe
  * <br/>
- * Description:
+ * Description:  代理，一个方法 之前 之后 之出错 之环绕
  */
 interface Fiying {
     void m1();
@@ -57,6 +54,7 @@ public class TestProxy {
         Swan swan = new Swan();
         // 代理。
         Fiying b = (Fiying) Proxy.newProxyInstance(
+                // 它就是找到这个类。
                 TestProxy.class.getClassLoader(),
                 swan.getClass().getInterfaces(),
                 new LogInvocationHandler(swan)

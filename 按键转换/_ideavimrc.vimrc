@@ -74,17 +74,24 @@ nnoremap <Space>o :action OverrideMethods<CR>
 vnoremap m :action FileStructurePopup<CR>
 " <C-S-Del> ,删除 if 循环 () {} 里面的东东。
 vnoremap D :action Unwrap<CR>
-" <A-Ins>
-vnoremap ai :action Generate<CR>
-" <A-Home>
-vnoremap ah :action ShowNavBar<CR>
 " Ctrl+Alt+F12 在文件夹中显示
 vnoremap fb :action ShowFilePath<CR>
-
-
+" <F9>
+vnoremap n :action ChooseDebugConfiguration<CR>v
+" <C-F4> 关闭当前标签页。
+vnoremap w :action CloseContent<CR>
+" 关闭其它标签页。
+vnoremap e :action CloseAllEditorsButActive<CR>
 
 
 " ============= \ ============= 
 " 转换激活终端工具窗口
 nnoremap <Leader>c :action ActivateTerminalToolWindow<CR>
+" <A-Ins>
+nnoremap <Leader>i :action Generate<CR>
+" <A-Home>
+nnoremap <Leader>h :action ShowNavBar<CR>
+" 关闭所有标签页。
+nnoremap <Leader>a :action CloseAllEditors<CR>
+
 
