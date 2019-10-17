@@ -1,3 +1,5 @@
+
+
 set keep-english-in-normal-and-restore-in-insert
 set nowrapscan " 禁止在搜索到文件两端时重新搜索
 set hlsearch " 搜索时显示高亮
@@ -31,8 +33,7 @@ nnoremap U <C-r>
 nnoremap Y y$
 
 
-" Ctrl+Shift+M 在 {} 切换
-nnoremap z[ :action EditorMatchBrace<CR>
+
 
 
 " 选项卡操作
@@ -45,56 +46,151 @@ nnoremap tp gT
 nnoremap <Space>cr :action RunClass<CR>
 " <S-F9>
 nnoremap <Space>dr :action Debug<CR>
-" <C-F5>
-nnoremap <Space>r :action Rerun<CR>
 " <C-S-CR>
 nnoremap [ :action EditorCompleteStatement<CR>a
-" <A-Up> alt+ 上下光标
-nnoremap <Space>k :action MethodUp<CR>
-" <A-Down>
-nnoremap <Space>j :action MethodDown<CR>
-" <C-S-F12> 全屏
-nnoremap <Space>f :action HideAllWindows<CR>
-" <F12> 返回上一个窗口。
-nnoremap <Space>l :action JumpToLastWindow<CR>
-" <F2>
-nnoremap <Space>n :action GotoNextError<CR>
-" <S-F2>
-nnoremap <Space>N :action GotoPreviousError<CR>
-" <C-F1>
-nnoremap <Space>s :action ShowErrorDescription<CR>
-" <A-C-L>格式化代码 
-nnoremap <Space>a :action ReformatCode<CR>
 
 
-" ============= v ============= 
-" <C-F12>
-vnoremap m :action FileStructurePopup<CR>
-" <C-S-Del> ,删除 if 循环 () {} 里面的东东。
-vnoremap d :action Unwrap<CR>
-" Ctrl+Alt+F12 在文件夹中显示
-vnoremap fb :action ShowFilePath<CR>
-" <F9>
-vnoremap n :action ChooseDebugConfiguration<CR>v
 
+
+
+"===> a
+"===> b
+"===> c
+"===> d
+"===> e
+"===> f
+"===> g
+"===> h
+"===> i
+"===> j
+"===> k
+"===> l
+"===> m
+"===> n
+"===> o
+"===> p
+"===> q
+"===> r
+" <C-F5>
+nnoremap <Space>r :action Rerun<CR>
+"===> s
+"===> t
+"===> u
+"===> v
+"===> w
+"===> x
+"===> y
+"===> z
 
 
 
 
 " ============= \ ============= 
-" 转换激活终端工具窗口
-nnoremap <Leader>c :action ActivateTerminalToolWindow<CR>
-" <A-Ins>
-nnoremap <Leader>i :action Generate<CR>
-" <A-Home>
-nnoremap <Leader>h :action ShowNavBar<CR>
+"===> a
 " 关闭所有标签页。
 nnoremap <Leader>a :action CloseAllEditors<CR>
-" <C-F4> 关闭当前标签页。
-nnoremap <Leader>w :action CloseContent<CR>
+"===> b
+"===> c
+"===> d
+"===> e
 " 关闭其它标签页。
 nnoremap <Leader>e :action CloseAllEditorsButActive<CR>
-" 实现接口与重写方法。
+"===> f
+"===> g
+"===> h
+"===> i
+" 实现接口
 nnoremap <Leader>i :action ImplementMethods<CR>
+"===> j
+"===> k
+"===> l
+"===> m
+"===> n
+"===> o
+" 重写方法。
 nnoremap <Leader>o :action OverrideMethods<CR>
+"===> p
+"===> q
+"===> r
+"===> s
+"===> t
+"===> u
+"===> v
+"===> w
+" <C-F4> 关闭当前标签页。
+nnoremap <Leader>w :action CloseContent<CR>
+"===> x
+"===> y
+"===> z
 
+
+
+
+
+
+
+
+
+
+
+" ============= v ============= i a b h j k l o s w x e
+"====> c
+" <A-Home>
+vnoremap c :action ShowNavBar<CR><ESC>
+
+" ===> d
+" <C-S-Del> ,删除 if 循环 () {} 里面的东东。
+vnoremap d :action Unwrap<CR><ESC>
+
+" ===> f
+" <A-C-L>格式化代码 
+vnoremap f :action ReformatCode<CR><ESC>
+
+" ===> m
+" <C-F12>
+vnoremap m :action FileStructurePopup<CR><ESC>
+
+" ===> n
+" <C-S-F12> 全屏
+vnoremap n :action HideAllWindows<CR><ESC>
+
+"===> g
+" <A-Ins>
+vnoremap g :action Generate<CR><ESC>
+
+"===> p 
+" <F12> 返回上一个窗口。
+vnoremap p :action JumpToLastWindow<CR><ESC>
+
+"===> q 
+" Ctrl+Shift+M 在 {} 切换
+vnoremap q :action EditorMatchBrace<CR><ESC>
+" Ctrl+Alt+F12 在文件夹中显示
+vnoremap Q :action ShowFilePath<CR><ESC>
+
+"===> r 
+" <C-F1>
+vnoremap r :action ShowErrorDescription<CR><ESC>
+
+"===> t 
+" 转换激活终端工具窗口
+vnoremap t :action ActivateTerminalToolWindow<CR><ESC>
+vnoremap T :action Refactorings.QuickListPopupAction<CR><ESC>
+
+"===> u 
+" <A-Up> alt+ 上下光标 上
+vnoremap u :action MethodUp<CR><ESC>
+
+"===> v  
+" <F2>
+vnoremap v :action GotoNextError<CR><ESC>
+" <S-F2>
+vnoremap V :action GotoPreviousError<CR><ESC>
+
+"===> y 
+" <A-Up> alt+ 上下光标 下
+vnoremap y :action MethodDown<CR><ESC>
+
+"===> z
+" <F9>
+vnoremap z :action ChooseDebugConfiguration<CR><ESC>
