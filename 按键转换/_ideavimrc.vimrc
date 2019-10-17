@@ -89,8 +89,18 @@ nnoremap <Space>r :action Rerun<CR>
 "===> a
 " 关闭所有标签页。
 nnoremap <Leader>a :action CloseAllEditors<CR>
+
 "===> b
+" <C-S-i>
+nnoremap <Leader>b :action QuickImplementations<CR>
+
 "===> c
+" <A-C-F7>,<A-F7> 在那些地方用到它了。
+" <A-C-F7>
+nnoremap <Leader>c :action ShowUsages<CR>
+" <A-F7>
+nnoremap <Leader>C :action FindUsages<CR>
+
 "===> d
 "===> e
 " 关闭其它标签页。
@@ -114,6 +124,10 @@ nnoremap <Leader>o :action OverrideMethods<CR>
 "===> r
 "===> s
 "===> t
+" <A-C-T> 环绕 if
+nnoremap <Leader>T :action SurroundWith<CR>
+" <C-F7>
+nnoremap <Leader>t :action FindUsagesInFile<CR>
 "===> u
 "===> v
 "===> w
@@ -122,6 +136,10 @@ nnoremap <Leader>w :action CloseContent<CR>
 "===> x
 "===> y
 "===> z
+
+
+
+
 
 
 
@@ -145,6 +163,8 @@ vnoremap d :action Unwrap<CR><ESC>
 " ===> f
 " <A-C-L>格式化代码 
 vnoremap f :action ReformatCode<CR><ESC>
+" <C-A-O>
+vnoremap F :action OptimizeImports<CR><ESC>
 
 " ===> m
 " <C-F12>
