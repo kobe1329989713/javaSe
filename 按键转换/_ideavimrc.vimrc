@@ -65,6 +65,8 @@ nnoremap [ :action EditorCompleteStatement<CR>a
 "===> j
 "===> k
 "===> l
+" <F12> 返回上一个窗口。
+nnoremap <Space>l :action JumpToLastWindow<CR>
 "===> m
 "===> n
 "===> o
@@ -121,6 +123,8 @@ nnoremap <Leader>i :action ImplementMethods<CR>
 nnoremap <Leader>o :action OverrideMethods<CR>
 "===> p
 "===> q
+" Ctrl+Shift+M 在 {} 切换
+nnoremap <Leader>q :action EditorMatchBrace<CR>
 "===> r
 "===> s
 "===> t
@@ -135,7 +139,12 @@ nnoremap <Leader>t :action FindUsagesInFile<CR>
 nnoremap <Leader>w :action CloseContent<CR>
 "===> x
 "===> y
+
 "===> z
+" <C-S-[> 向上，
+nnoremap z[ :action EditorCodeBlockStartWithSelection<CR>
+" <C-S-[> 向下
+nnoremap z] :action EditorCodeBlockEndWithSelection<CR>
 
 
 
@@ -151,7 +160,8 @@ nnoremap <Leader>w :action CloseContent<CR>
 
 
 
-" ============= v ============= i a b h j k l o s w x e
+
+" ============= v ============= i a b h j k l o s w x e p r
 "====> c
 " <A-Home>
 vnoremap c :action ShowNavBar<CR><ESC>
@@ -178,19 +188,11 @@ vnoremap n :action HideAllWindows<CR><ESC>
 " <A-Ins>
 vnoremap g :action Generate<CR><ESC>
 
-"===> p 
-" <F12> 返回上一个窗口。
-vnoremap p :action JumpToLastWindow<CR><ESC>
-
 "===> q 
-" Ctrl+Shift+M 在 {} 切换
-vnoremap q :action EditorMatchBrace<CR><ESC>
+" <C-F1>
+vnoremap q :action ShowErrorDescription<CR><ESC>
 " Ctrl+Alt+F12 在文件夹中显示
 vnoremap Q :action ShowFilePath<CR><ESC>
-
-"===> r 
-" <C-F1>
-vnoremap r :action ShowErrorDescription<CR><ESC>
 
 "===> t 
 " 转换激活终端工具窗口
