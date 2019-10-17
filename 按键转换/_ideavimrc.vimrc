@@ -65,8 +65,13 @@ nnoremap <Space>j :action MethodDown<CR>
 " <C-S-F12> 全屏
 nnoremap <Space>f :action HideAllWindows<CR>
 " <F12> 返回上一个窗口。
-nnoremap ; :action JumpToLastWindow<CR>
-
+nnoremap <Space>l :action JumpToLastWindow<CR>
+" <F2>
+nnoremap <Space>n :action GotoNextError<CR>
+" <S-F2>
+nnoremap <Space>N :action GotoPreviousError<CR>
+" <C-F1>
+nnoremap <Space>s :action ShowErrorDescription<CR>
 
 
 " <C-F12>
@@ -79,3 +84,5 @@ vnoremap ai :action Generate<CR>
 vnoremap ah :action ShowNavBar<CR>
 " Ctrl+Alt+F12 在文件夹中显示
 vnoremap fb :action ShowFilePath<CR>
+" 转换激活终端工具窗口
+vnoremap c :action ActivateTerminalToolWindow<CR>
