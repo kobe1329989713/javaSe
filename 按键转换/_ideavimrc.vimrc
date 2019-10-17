@@ -63,9 +63,7 @@ nnoremap <Space>n :action GotoNextError<CR>
 nnoremap <Space>N :action GotoPreviousError<CR>
 " <C-F1>
 nnoremap <Space>s :action ShowErrorDescription<CR>
-" 实现接口与重写方法。
-nnoremap <Space>i :action ImplementMethods<CR>
-nnoremap <Space>o :action OverrideMethods<CR>
+
 
 
 
@@ -73,7 +71,7 @@ nnoremap <Space>o :action OverrideMethods<CR>
 " <C-F12>
 vnoremap m :action FileStructurePopup<CR>
 " <C-S-Del> ,删除 if 循环 () {} 里面的东东。
-vnoremap D :action Unwrap<CR>
+vnoremap d :action Unwrap<CR>
 " Ctrl+Alt+F12 在文件夹中显示
 vnoremap fb :action ShowFilePath<CR>
 " <F9>
@@ -82,6 +80,10 @@ vnoremap n :action ChooseDebugConfiguration<CR>v
 vnoremap w :action CloseContent<CR>
 " 关闭其它标签页。
 vnoremap e :action CloseAllEditorsButActive<CR>
+" 实现接口与重写方法。
+vnoremap i :action ImplementMethods<CR>
+vnoremap o :action OverrideMethods<CR>
+
 
 
 " ============= \ ============= 
