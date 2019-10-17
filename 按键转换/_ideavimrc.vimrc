@@ -41,6 +41,10 @@ nnoremap tn gt
 nnoremap tp gT
 
 
+
+
+
+
 " ============= 空格 ============= 
 " <C-S-F10>   加Space(空格)
 nnoremap <Space>cr :action RunClass<CR>
@@ -48,10 +52,6 @@ nnoremap <Space>cr :action RunClass<CR>
 nnoremap <Space>dr :action Debug<CR>
 " <C-S-CR>
 nnoremap [ :action EditorCompleteStatement<CR>a
-
-
-
-
 
 "===> a
 "===> b
@@ -123,8 +123,6 @@ nnoremap <Leader>i :action ImplementMethods<CR>
 nnoremap <Leader>o :action OverrideMethods<CR>
 "===> p
 "===> q
-" Ctrl+Shift+M 在 {} 切换
-nnoremap <Leader>q :action EditorMatchBrace<CR>
 "===> r
 "===> s
 "===> t
@@ -137,16 +135,19 @@ nnoremap <Leader>t :action FindUsagesInFile<CR>
 "===> w
 " <C-F4> 关闭当前标签页。
 nnoremap <Leader>w :action CloseContent<CR>
+
 "===> x
 "===> y
 
 "===> z
+" <F9>
+nnoremap <Leader>z :action ChooseDebugConfiguration<CR>
 " <C-S-[> 向上，
 nnoremap z[ :action EditorCodeBlockStartWithSelection<CR>
 " <C-S-[> 向下
 nnoremap z] :action EditorCodeBlockEndWithSelection<CR>
-
-
+" 退出
+nnoremap zq :action Exit<CR>
 
 
 
@@ -214,5 +215,5 @@ vnoremap V :action GotoPreviousError<CR><ESC>
 vnoremap y :action MethodDown<CR><ESC>
 
 "===> z
-" <F9>
-vnoremap z :action ChooseDebugConfiguration<CR><ESC>
+" Ctrl+Shift+M 在 {} 切换
+vnoremap z :action EditorMatchBrace<CR><ESC>
