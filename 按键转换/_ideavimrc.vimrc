@@ -154,9 +154,9 @@ nnoremap <Leader>w :action CloseContent<CR>
 " <F9>
 nnoremap <Leader>z :action ChooseDebugConfiguration<CR>
 " <C-S-[> 向上，
-nnoremap z[ :action EditorCodeBlockStartWithSelection<CR><ESC>
+nnoremap z[ :action EditorCodeBlockStartWithSelection<CR>
 " <C-S-[> 向下
-nnoremap z] :action EditorCodeBlockEndWithSelection<CR><ESC>
+nnoremap z] :action EditorCodeBlockEndWithSelection<CR>
 " 退出
 nnoremap zq :action Exit<CR>
 
