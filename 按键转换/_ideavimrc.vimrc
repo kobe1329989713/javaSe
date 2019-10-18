@@ -104,35 +104,46 @@ nnoremap <Leader>c :action ShowUsages<CR>
 nnoremap <Leader>C :action FindUsages<CR>
 
 "===> d
+" Ctrl+Shift+M 在 {} 切换
+nnoremap <Leader>d :action EditorMatchBrace<CR>
+
 "===> e
 " 关闭其它标签页。
 nnoremap <Leader>e :action CloseAllEditorsButActive<CR>
+
 "===> f
 "===> g
 "===> h
+
 "===> i
 " 实现接口
 nnoremap <Leader>i :action ImplementMethods<CR>
+
 "===> j
 "===> k
 "===> l
 "===> m
 "===> n
+
 "===> o
 " 重写方法。
 nnoremap <Leader>o :action OverrideMethods<CR>
+
 "===> p
 "===> q
 "===> r
 "===> s
+
 "===> t
 " <A-C-T> 环绕 if
 nnoremap <Leader>T :action SurroundWith<CR>
 " <C-F7>
 nnoremap <Leader>t :action FindUsagesInFile<CR>
+
 "===> u
 "===> v
 "===> w
+
 " <C-F4> 关闭当前标签页。
 nnoremap <Leader>w :action CloseContent<CR>
 
@@ -215,5 +226,4 @@ vnoremap V :action GotoPreviousError<CR><ESC>
 vnoremap y :action MethodDown<CR><ESC>
 
 "===> z
-" Ctrl+Shift+M 在 {} 切换
-vnoremap z :action EditorMatchBrace<CR><ESC>
+
