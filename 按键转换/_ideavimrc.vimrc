@@ -45,7 +45,7 @@ nnoremap tp gT
 
 
 
-" ============= 空格 ============= 
+" ============= 空格 ============= c d
 " <C-S-F10>   加Space(空格)
 nnoremap <Space>cr :action RunClass<CR>
 " <S-F9>
@@ -54,27 +54,67 @@ nnoremap <Space>dr :action Debug<CR>
 nnoremap [ :action EditorCompleteStatement<CR>a
 
 "===> a
+" <C-F5>
+nnoremap <Space>a :action Rerun<CR>
+" 停止 
+nnoremap <Space>A :action Stop<CR>
+
 "===> b
-"===> c
-"===> d
+" <C-F8>打上断点 / 取消断点  
+nnoremap <Space>b :action ToggleLineBreakpoint<CR>
+" <A-C-S-F8>临时断点，运行完自动删除断点
+nnoremap <Space>B :action ToggleTemporaryLineBreakpoint<CR>
+
 "===> e
+" <C-S-F8> 取消所有(某些)断点和查看断点
+nnoremap <Space>e :action ViewBreakpoints<CR>
+
 "===> f
+" 禁用断点(运行debug时有效)
+nnoremap <Space>f :action XDebugger.MuteBreakpoints<CR>
+
 "===> g
+" <A-F10> 回到断点(无论在那里都回到执行那一步断点)
+nnoremap <Space>g :action ShowExecutionPoint<CR>
+
 "===> h
-"===> i
-"===> j
-"===> k
-"===> l
-" <F12> 返回上一个窗口。
-nnoremap <Space>l :action JumpToLastWindow<CR>
-"===> m
-"===> n
+" F7 进入方法里
+nnoremap <Space>h :action StepInto<CR>
+" <A-S-F7> 强力进入某个方法里
+nnoremap <Space>H :action ForceStepInto<CR>
 "===> o
+" <S-F7> tab 进入到某个特定的方法里。
+nnoremap <Space>o :action SmartStepInto<CR>
+
+"===> i
+" <S-F8> 从某个方法里退出
+nnoremap <Space>i :action StepOut<CR>
+
+"===> j
+" F8
+nnoremap <Space>j :action StepOver<CR>
+
+"===> k
+" <A-F8>计算表达式，选中它，在按
+nnoremap <Space>k :action EvaluateExpression<CR>
+
+"===> l
+" <A-F9>执行到光标所在行
+nnoremap <Space>l :action RunToCursor<CR>
+
+"===> m
+" <F9> 执行到下一个断点。 
+nnoremap <Space>m :action Resume<CR>
+
+"===> n
+" <C-S-F8> 编辑断点 
+nnoremap <Space>n :action EditBreakpoint<CR>
+
+
+
 "===> p
 "===> q
 "===> r
-" <C-F5>
-nnoremap <Space>r :action Rerun<CR>
 "===> s
 "===> t
 "===> u
@@ -85,16 +125,16 @@ nnoremap <Space>r :action Rerun<CR>
 "===> z
 
 
+" 重新运行断点(降针) Drop Frame
 
 
-" ============= \ ============= 
+
+
+
+" ============= \ ============= f d u b
 "===> a
 " 关闭所有标签页。
 nnoremap <Leader>a :action CloseAllEditors<CR>
-
-"===> b
-" <C-S-i>
-nnoremap <Leader>b :action QuickImplementations<CR>
 
 "===> c
 " <A-C-F7>,<A-F7> 在那些地方用到它了。
@@ -103,17 +143,20 @@ nnoremap <Leader>c :action ShowUsages<CR>
 " <A-F7>
 nnoremap <Leader>C :action FindUsages<CR>
 
-"===> d
-" Ctrl+Shift+M 在 {} 切换
-nnoremap <Leader>d :action EditorMatchBrace<CR>
-
 "===> e
 " 关闭其它标签页。
 nnoremap <Leader>e :action CloseAllEditorsButActive<CR>
 
-"===> f
+
+
+
 "===> g
+" <C-S-i>
+nnoremap <Leader>g :action QuickImplementations<CR>
+
 "===> h
+" Ctrl+Shift+M 在 {} 切换
+nnoremap <Leader>h :action EditorMatchBrace<CR>
 
 "===> i
 " 实现接口
@@ -140,7 +183,7 @@ nnoremap <Leader>T :action SurroundWith<CR>
 " <C-F7>
 nnoremap <Leader>t :action FindUsagesInFile<CR>
 
-"===> u
+
 "===> v
 "===> w
 
@@ -148,7 +191,14 @@ nnoremap <Leader>t :action FindUsagesInFile<CR>
 nnoremap <Leader>w :action CloseContent<CR>
 
 "===> x
+" 折叠之全部斩开
+nnoremap <Leader>x :action ExpandAllRegions<CR>
+
 "===> y
+" <C-F9> 编译整个项目
+nnoremap <Leader>y :action CompileDirty<CR>
+" <C-S-F9> 编译所在的这个文件
+nnoremap <Leader>Y :action Compile<CR>
 
 "===> z
 " <F9>
@@ -159,7 +209,6 @@ nnoremap z[ :action EditorCodeBlockStartWithSelection<CR>
 nnoremap z] :action EditorCodeBlockEndWithSelection<CR>
 " 退出
 nnoremap zq :action Exit<CR>
-
 
 
 
@@ -226,4 +275,5 @@ vnoremap V :action GotoPreviousError<CR><ESC>
 vnoremap y :action MethodDown<CR><ESC>
 
 "===> z
-
+" <F12> 返回上一个窗口。
+vnoremap z :action JumpToLastWindow<CR><ESC>
