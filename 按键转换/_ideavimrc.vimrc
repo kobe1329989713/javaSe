@@ -44,6 +44,24 @@ nnoremap tp gT
 
 
 
+" ============= g =============
+" gi  它不进行插入模式，退格是 BS
+nnoremap <Space>gi :action JumpToLastChange<CR>
+
+" <A-C-Left> 上一次编辑地方
+nnoremap g; :action Back<CR>
+
+" <A-C-Right> 下一次编辑地方
+nnoremap g, :action Forward<CR>
+
+
+
+
+
+
+
+
+
 
 " ============= 空格 ============= c d
 " <C-S-F10>   加Space(空格)
@@ -203,10 +221,6 @@ nnoremap <Leader>Y :action Compile<CR>
 "===> z
 " <F9>
 nnoremap <Leader>z :action ChooseDebugConfiguration<CR>
-" <C-S-[> 向上，
-nnoremap z[ :action EditorCodeBlockStartWithSelection<CR>
-" <C-S-[> 向下
-nnoremap z] :action EditorCodeBlockEndWithSelection<CR>
 " 退出
 nnoremap zq :action Exit<CR>
 
@@ -222,7 +236,7 @@ nnoremap zq :action Exit<CR>
 
 
 
-" ============= v ============= i a b h j k l o s w x e p r
+" ============= v ============= i a b h j k l o s w x e p r y
 "====> c
 " <A-Home>
 vnoremap c :action ShowNavBar<CR><ESC>
@@ -262,17 +276,15 @@ vnoremap T :action Refactorings.QuickListPopupAction<CR><ESC>
 
 "===> u 
 " <A-Up> alt+ 上下光标 上
-vnoremap u :action MethodUp<CR><ESC>
+vnoremap U :action MethodUp<CR><ESC>
+" <A-Up> alt+ 上下光标 下
+vnoremap u :action MethodDown<CR><ESC>
 
 "===> v  
 " <F2>
 vnoremap v :action GotoNextError<CR><ESC>
 " <S-F2>
 vnoremap V :action GotoPreviousError<CR><ESC>
-
-"===> y 
-" <A-Up> alt+ 上下光标 下
-vnoremap y :action MethodDown<CR><ESC>
 
 "===> z
 " <F12> 返回上一个窗口。

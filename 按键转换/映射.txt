@@ -194,3 +194,9 @@ nnoremap <Leader>jk :action UnselectPreviousOccurrence<CR>
 " nnoremap zj :action EditorScrollDown<CR>
 " <C-Tab><C-E>
 " nnoremap <Space>e :action Switcher<CR>
+
+
+" <C-S-[> 向上，
+nnoremap z[ :action EditorCodeBlockStartWithSelection<CR>
+" <C-S-[> 向下
+nnoremap z] :action EditorCodeBlockEndWithSelection<CR>
