@@ -46,6 +46,7 @@ nnoremap tp gT
 
 " ============= g =============
 " gi  它不进行插入模式，退格是 BS
+" 上次编辑的位置
 nnoremap <Space>gi :action JumpToLastChange<CR>
 
 " <A-C-Left> 上一次编辑地方
