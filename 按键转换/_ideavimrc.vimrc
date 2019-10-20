@@ -46,7 +46,7 @@ nnoremap tp gT
 
 " ============= g =============
 " gi  它不进行插入模式，退格是 BS
-" 上次编辑的位置
+" 上次编辑的位置，ideavim 有 :changes 说明支持 g; g, 命令了。
 nnoremap <Space>gi :action JumpToLastChange<CR>
 
 " <A-C-Left> 上一次编辑地方
@@ -55,7 +55,7 @@ nnoremap g; :action Back<CR>
 " <A-C-Right> 下一次编辑地方
 nnoremap g, :action Forward<CR>
 " <C-S-V>
-nnoremap gv :action PasteMultiple<CR>
+nnoremap <Space>gv :action PasteMultiple<CR>
 
 
 
