@@ -200,3 +200,5 @@ nnoremap <Leader>jk :action UnselectPreviousOccurrence<CR>
 nnoremap z[ :action EditorCodeBlockStartWithSelection<CR>
 " <C-S-[> 向下
 nnoremap z] :action EditorCodeBlockEndWithSelection<CR>
+
+nnoremap <C-a> ggVG
