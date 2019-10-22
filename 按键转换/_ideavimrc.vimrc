@@ -32,9 +32,9 @@ nnoremap U <C-r>
 " 从那里复制到行尾。
 nnoremap Y y$
 
-
-
-
+" 选项卡操作
+nnoremap tn gt
+nnoremap tp gT
 
 
 

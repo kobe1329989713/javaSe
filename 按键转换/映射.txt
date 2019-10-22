@@ -206,3 +206,5 @@ nnoremap z i<BS><Esc>l
 " 选项卡操作
 nnoremap tn gt
 nnoremap tp gT
+" <C-Tab>要多按下 <CR>==回车
+nnoremap v; :action Switcher<CR>
