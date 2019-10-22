@@ -128,18 +128,21 @@ nnoremap <Space>A :action Stop<CR>
 nnoremap <Space>b :action ToggleLineBreakpoint<CR>
 " <A-C-S-F8>临时断点，运行完自动删除断点
 nnoremap <Space>B :action ToggleTemporaryLineBreakpoint<CR>
+"===> j
+" F8
+nnoremap <Space>j :action StepOver<CR>
+
 
 "===> e
 " <C-S-F8> 取消所有(某些)断点和查看断点
 nnoremap <Space>e :action ViewBreakpoints<CR>
+"===> n
+" <C-S-F8> 编辑断点,加条件
+nnoremap <Space>n :action EditBreakpoint<CR>
 
-"===> f
-" 禁用断点(运行debug时有效)
-nnoremap <Space>f :action XDebugger.MuteBreakpoints<CR>
 
-"===> g
-" <A-F10> 回到断点(无论在那里都回到执行那一步断点)
-nnoremap <Space>g :action ShowExecutionPoint<CR>
+
+
 
 "===> h
 " F7 进入方法里
@@ -149,30 +152,29 @@ nnoremap <Space>H :action ForceStepInto<CR>
 "===> o
 " <S-F7> tab 进入到某个特定的方法里。
 nnoremap <Space>o :action SmartStepInto<CR>
-
 "===> i
 " <S-F8> 从某个方法里退出
 nnoremap <Space>i :action StepOut<CR>
 
-"===> j
-" F8
-nnoremap <Space>j :action StepOver<CR>
 
+"===> g
+" <A-F10> 回到断点(无论在那里都回到执行那一步断点)
+nnoremap <Space>g :action ShowExecutionPoint<CR>
 "===> k
 " <A-F8>计算表达式，选中它，在按
 nnoremap <Space>k :action EvaluateExpression<CR>
 
+
 "===> l
 " <A-F9>执行到光标所在行
 nnoremap <Space>l :action RunToCursor<CR>
-
 "===> m
 " <F9> 执行到下一个断点。 
 nnoremap <Space>m :action Resume<CR>
+"===> f
+" 禁用断点(运行debug时有效)
+nnoremap <Space>f :action XDebugger.MuteBreakpoints<CR>
 
-"===> n
-" <C-S-F8> 编辑断点 
-nnoremap <Space>n :action EditBreakpoint<CR>
 
 "===> q
 "===> s
