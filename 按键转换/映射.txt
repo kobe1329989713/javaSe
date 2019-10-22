@@ -203,8 +203,27 @@ nnoremap z] :action EditorCodeBlockEndWithSelection<CR>
 nnoremap <C-a> ggVG
 " 退格键，并不退出命令模式
 nnoremap z i<BS><Esc>l
-" 选项卡操作
-nnoremap tn gt
-nnoremap tp gT
+
 " <C-Tab>要多按下 <CR>==回车
 nnoremap v; :action Switcher<CR>
+" <A-Home>
+vnoremap c :action ShowNavBar<CR><ESC>
+
+
+
+
+" split分屏
+nnoremap <Space>ws <C-W>s
+nnoremap <Space>wv <C-W>v
+" 移动到窗口  ##
+nnoremap <Space>wj <C-W>j
+nnoremap <Space>wk <C-W>k
+nnoremap <Space>wh <C-W>h
+nnoremap <Space>wl <C-W>l
+
+
+
+nnoremap <Leader>f <C-f>
+nnoremap <Leader>b <C-b>
+nnoremap <Leader>d <C-d>
+nnoremap <Leader>u <C-u>
