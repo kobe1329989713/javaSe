@@ -150,7 +150,7 @@ nnoremap <Space>n :action EditBreakpoint<CR>
 
 
 
-" ============= \ ============= f d u b
+" ============= \ ============= f d u b Z
 "===> a
 " 关闭所有标签页。
 nnoremap <Leader>a :action CloseAllEditors<CR>
@@ -166,9 +166,6 @@ nnoremap <Leader>C :action FindUsages<CR>
 " 关闭其它标签页。
 nnoremap <Leader>e :action CloseAllEditorsButActive<CR>
 
-
-
-
 "===> g
 " <C-S-i>
 nnoremap <Leader>g :action QuickImplementations<CR>
@@ -182,7 +179,15 @@ nnoremap <Leader>h :action EditorMatchBrace<CR>
 nnoremap <Leader>i :action ImplementMethods<CR>
 
 "===> j
-"===> k
+" <A-7>
+nnoremap <Leader>j :action ActivateStructureToolWindow<CR>
+
+"===> k  光标最好在那个类上。
+" <A-C-U>
+nnoremap <Leader>k :action ShowUmlDiagramPopup<CR>
+" <A-C-S-U>
+nnoremap <Leader>K :action ShowUmlDiagram<CR>
+
 "===> l
 "===> m
 "===> n
