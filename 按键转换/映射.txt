@@ -192,8 +192,7 @@ nnoremap <Leader>jk :action UnselectPreviousOccurrence<CR>
 " ctrl+ 上下光标 移动时，光标不会动，ctrl+m 又回到那一行上。
 " nnoremap zk :action EditorScrollUp<CR>
 " nnoremap zj :action EditorScrollDown<CR>
-" <C-Tab><C-E>
-" nnoremap <Space>e :action Switcher<CR>
+
 
 
 " <C-S-[> 向上，
