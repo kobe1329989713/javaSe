@@ -201,3 +201,8 @@ nnoremap z[ :action EditorCodeBlockStartWithSelection<CR>
 nnoremap z] :action EditorCodeBlockEndWithSelection<CR>
 
 nnoremap <C-a> ggVG
+" 退格键，并不退出命令模式
+nnoremap z i<BS><Esc>l
+" 选项卡操作
+nnoremap tn gt
+nnoremap tp gT

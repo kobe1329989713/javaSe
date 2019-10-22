@@ -31,24 +31,19 @@ nnoremap <Leader>u <C-u>
 nnoremap U <C-r>
 " 从那里复制到行尾。
 nnoremap Y y$
-" 退格键，并不退出命令模式
-nnoremap z i<BS><Esc>l
-
-" 选项卡操作
-nnoremap tn gt
-nnoremap tp gT
 
 
 
 
 
 
-" <C-E>
-nnoremap <Space>; :action RecentFiles<CR>
-" <C-Tab>要多按下 <CR>==回车
-nnoremap ; :action Switcher<CR>
+
+
+
+" <C-E> <C-Tab>要多按下 <CR>==回车
+nnoremap v; :action RecentFiles<CR>
 " <C-S-E>
-nnoremap q; :action RecentLocations<CR>
+nnoremap V; :action RecentLocations<CR>
 
 
 
@@ -137,9 +132,13 @@ nnoremap <Space>m :action Resume<CR>
 " <C-S-F8> 编辑断点 
 nnoremap <Space>n :action EditBreakpoint<CR>
 
+"===> q
+" <A-Q>
+nnoremap <Space>q :action EditorContextInfo<CR>
+
+
 "===> s
 "===> p
-"===> q
 "===> r
 "===> t
 "===> u
