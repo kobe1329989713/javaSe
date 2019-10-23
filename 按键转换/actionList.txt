@@ -1,4 +1,5 @@
-$ChooseTranslatorAction                            <C-S-S>
+- Actions ---
+$ChooseTranslatorAction
 $Copy                                              <C-C> <C-Ins>
 $Cut                                               <C-X> <S-Del>
 $Delete                                            <Del>
@@ -10,10 +11,10 @@ $Paste                                             <C-V> <S-Ins>
 $Redo                                              <C-S-Z> <A-S-BS>
 $SearchWeb
 $SelectAll                                         <C-A>
-$ShowInstantTranslationDialogAction
+$ShowInstantTranslationDialogAction                <C-S-S>
 $ShowTranslationDialogAction                       <C-S-O>
 $ShowWordOfTheDayAction
-$TranslateAndReplaceAction                         <C-S-X>
+$TranslateAndReplaceAction                         <A-R>
 $TranslateQuickDocAction                           <A-W>
 $TranslateTextComponent                            <A-W>
 $Undo                                              <C-Z> <A-BS>
@@ -63,12 +64,14 @@ ActivateAntToolWindow
 ActivateBuildToolWindow
 ActivateDatabaseChangesToolWindow
 ActivateDatabaseToolWindow
+ActivateDebugToolWindow                            <A-5>
 ActivateEventLogToolWindow
 ActivateFavoritesToolWindow                        <A-2>
-ActivateLearnToolWindow
+ActivateMessagesToolWindow                         <A-0>
 ActivateNavBar
 ActivateProblemsToolWindow
 ActivateProjectToolWindow                          <A-1>
+ActivateRunToolWindow                              <A-4>
 ActivateServicesToolWindow                         <A-8>
 ActivateStructureToolWindow                        <A-7>
 ActivateTerminalToolWindow                         <A-F12>
@@ -276,8 +279,8 @@ ClassNameCompletion                                <A-C- >
 ClassTemplateNavigation                            <C-S-G>
 CleanGradleProject
 CloseActiveTab                                     <C-S-F4>
-CloseAllEditors
-CloseAllEditorsButActive
+CloseAllEditors                                    <A-A>
+CloseAllEditorsButActive                           <A-E>
 CloseAllNotifications
 CloseAllToTheLeft
 CloseAllToTheRight
@@ -295,7 +298,7 @@ CloudConfigPluginsAction
 CloudConfigSilentlyAction
 CloudConfigUpdateApi
 CodeCleanup
-CodeCompletion                                     <C- > <S-Z>
+CodeCompletion                                     <S-Z>
 CodeCompletionGroup
 CodeEditorBaseGroup
 CodeEditorViewGroup
@@ -392,7 +395,7 @@ Console.TableResult.ChangeIsolation
 Console.TableResult.ChangePageSize
 Console.TableResult.ChooseExtractor
 Console.TableResult.CloneColumn                    <A-C-S-D>
-Console.TableResult.CloneRow                       <C-D>
+Console.TableResult.CloneRow
 Console.TableResult.ColumnActions
 Console.TableResult.ColumnHeaderPopup
 Console.TableResult.ColumnsList                    <C-F12>
@@ -536,7 +539,7 @@ DatabaseView.AddSchemasAction
 DatabaseView.AssignColor
 DatabaseView.BatchModifyIndices
 DatabaseView.CloseConnectionAction                 <C-F2>
-DatabaseView.CopyAction                            <C-D>
+DatabaseView.CopyAction
 DatabaseView.CopyDataSourceSettings
 DatabaseView.CopyDdlAction                         <A-C-S-G> <C-S-C>
 DatabaseView.CopyDdlFromDbAction
@@ -659,6 +662,7 @@ delombokFieldNameCostants
 delombokGetter
 delombokLogger
 delombokSetter
+delombokSuperBuilder
 delombokToString
 delombokUtilityClass
 delombokValue
@@ -847,10 +851,10 @@ EditorDeleteToWordEnd                              <C-Del>
 EditorDeleteToWordEndInDifferentHumpsMode
 EditorDeleteToWordStart                            <C-BS>
 EditorDeleteToWordStartInDifferentHumpsMode
-EditorDown                                         <Down> <A-I>
-EditorDownWithSelection                            <S-Down> <A-[>
-EditorDuplicate                                    <C-D>
-EditorDuplicateLines
+EditorDown                                         <Down> <A-J>
+EditorDownWithSelection                            <S-Down>
+EditorDuplicate
+EditorDuplicateLines                               <C-D>
 EditorEnter                                        <CR>
 EditorEscape                                       <Esc>
 EditorFocusGutter                                  <A-S-6>
@@ -957,7 +961,7 @@ EditorToggleUseSoftWrapsInPreview
 EditorUnindentSelection                            <S-Tab>
 EditorUnSelectWord                                 <C-S-W>
 EditorUp                                           <Up> <A-K>
-EditorUpWithSelection                              <S-Up> <A-]>
+EditorUpWithSelection                              <S-Up>
 EditPropertyValue                                  <A-F6>
 editRunConfigurations
 EditSelectGroup
@@ -1369,7 +1373,7 @@ GuiDesigner.DataBindingWizard
 GuiDesigner.DecreaseIndent                         <S-Tab>
 GuiDesigner.DeleteComponent                        <Del>
 GuiDesigner.DeleteGroup                            <Del>
-GuiDesigner.Duplicate                              <C-D>
+GuiDesigner.Duplicate
 GuiDesigner.EditComponent                          <F2>
 GuiDesigner.EditGroup                              <F2>
 GuiDesigner.EditorPopupMenu
@@ -1625,10 +1629,6 @@ KotlinToolsGroup
 LangCodeInsightActions
 LanguageSpecificFoldingGroup
 LayoutEditor.AddSampleData
-learn.next.lesson                                  <A-S-Right>
-learn.open.chooseLang
-learn.open.lesson
-Learn.WelcomeScreen.StartLearn
 LegacyNewAndroidComponent
 Library.Properties
 LibraryProperties
@@ -1642,12 +1642,12 @@ List-selectLastRow                                 <C-End>
 List-selectLastRowExtendSelection                  <C-S-End>
 List-selectNextColumn                              <Right> <A-L>
 List-selectNextColumnExtendSelection               <S-Right>
-List-selectNextRow                                 <Down> <A-I>
-List-selectNextRowExtendSelection                  <S-Down> <A-[>
+List-selectNextRow                                 <Down> <A-J>
+List-selectNextRowExtendSelection                  <S-Down>
 List-selectPreviousColumn                          <Left> <A-H>
 List-selectPreviousColumnExtendSelection           <S-Left>
 List-selectPreviousRow                             <Up> <A-K>
-List-selectPreviousRowExtendSelection              <S-Up> <A-]>
+List-selectPreviousRowExtendSelection              <S-Up>
 ListActions
 liveedit.UpdateRunningApplication                  <C-F10>
 LoadUnloadModules
@@ -1797,7 +1797,7 @@ mybatis.LearnMore
 NavBar-cancel                                      <Esc>
 NavBar-navigate                                    <F4>
 NavBar-return                                      <CR>
-NavBar-selectDown                                  <Down> <A-I>
+NavBar-selectDown                                  <Down> <A-J>
 NavBar-selectEnd                                   <End>
 NavBar-selectHome                                  <Home>
 NavBar-selectLeft                                  <Left> <A-H>
@@ -1953,7 +1953,7 @@ PopupHector                                        <A-C-S-H>
 PopupMenu-cancel                                   <Esc>
 PopupMenu-return                                   <CR>
 PopupMenu-selectChild                              <Right> <A-L>
-PopupMenu-selectNext                               <Down> <A-I>
+PopupMenu-selectNext                               <Down> <A-J>
 PopupMenu-selectParent                             <Left> <A-H>
 PopupMenu-selectPrevious                           <Up> <A-K>
 PopupMenuActions
@@ -2107,7 +2107,7 @@ RunContextGroupInner
 RunContextPopupGroup
 RunCoverage
 RunDashboard.ClearContent
-RunDashboard.CopyConfiguration                     <C-D>
+RunDashboard.CopyConfiguration
 RunDashboard.Debug
 RunDashboard.EditConfiguration                     <S-F4>
 RunDashboard.GroupBy
@@ -2222,7 +2222,7 @@ SelectBuildVariant
 SelectIn                                           <A-F1>
 SelectInProjectView
 SelectInRemoteHost
-SelectNextOccurrence                               <A-J>
+SelectNextOccurrence                               <A-I>
 SendEOF                                            <C-D>
 SendFeedback
 SendToFavoritesGroup
@@ -2442,16 +2442,16 @@ Table-selectLastRow                                <C-End>
 Table-selectLastRowExtendSelection                 <C-S-End>
 Table-selectNextColumn                             <Right> <A-L>
 Table-selectNextColumnExtendSelection              <S-Right>
-Table-selectNextRow                                <Down> <A-I>
-Table-selectNextRowExtendSelection                 <S-Down> <A-[>
+Table-selectNextRow                                <Down> <A-J>
+Table-selectNextRowExtendSelection                 <S-Down>
 Table-selectPreviousColumn                         <Left> <A-H>
 Table-selectPreviousColumnExtendSelection          <S-Left>
 Table-selectPreviousRow                            <Up> <A-K>
-Table-selectPreviousRowExtendSelection             <S-Up> <A-]>
+Table-selectPreviousRowExtendSelection             <S-Up>
 TableActions
 TableResult.GrowSelection                          <C-W>
 TableResult.SelectAllOccurrences                   <A-C-S-J>
-TableResult.SelectNextOccurrence                   <A-J>
+TableResult.SelectNextOccurrence                   <A-I>
 TableResult.UnselectPreviousOccurrence             <A-S-J>
 TabList
 TabsActions
@@ -2564,12 +2564,12 @@ Tree-selectFirst                                   <C-Home>
 Tree-selectFirstExtendSelection                    <C-S-Home>
 Tree-selectLast                                    <C-End>
 Tree-selectLastExtendSelection                     <C-S-End>
-Tree-selectNext                                    <Down> <A-I>
-Tree-selectNextExtendSelection                     <S-Down> <A-[>
+Tree-selectNext                                    <Down> <A-J>
+Tree-selectNextExtendSelection                     <S-Down>
 Tree-selectParent                                  <Left> <A-H>
 Tree-selectParentExtendSelection                   <S-Left>
 Tree-selectPrevious                                <Up> <A-K>
-Tree-selectPreviousExtendSelection                 <S-Up> <A-]>
+Tree-selectPreviousExtendSelection                 <S-Up>
 TreeActions
 TreeNodeExclusion
 TsLintFileFixAction
@@ -3121,7 +3121,7 @@ XDebugger.AttachToProcess                          <A-C-F5>
 XDebugger.CompareValueWithClipboard
 XDebugger.CopyName
 XDebugger.CopyValue                                <C-C> <C-Ins>
-XDebugger.CopyWatch                                <C-D>
+XDebugger.CopyWatch
 XDebugger.EditWatch                                <F2>
 XDebugger.Evaluate.Code.Fragment.Editor.Popup
 XDebugger.Evaluation.Dialog.Tree.Popup

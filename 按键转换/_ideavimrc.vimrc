@@ -41,7 +41,8 @@ nnoremap ld <C-d>
 nnoremap lu <C-u>
 
 
-" <C-S-F12> 全屏
+
+" <C-S-F12> 全屏,与返回
 nnoremap la :action HideAllWindows<CR>
 " <F12> 返回上一个窗口。
 nnoremap lc :action JumpToLastWindow<CR>
@@ -60,21 +61,12 @@ nnoremap lp :action ShowErrorDescription<CR>
 
 " <C-E> <C-Tab>要多按下 <CR>==回车
 nnoremap K :action RecentFiles<CR>
-" <C-S-E>
-nnoremap l; :action RecentLocations<CR>
 " <C-S-V>
 nnoremap lg :action PasteMultiple<CR>
 
 " <C-S-BS> gi  它不进行插入模式，退格是 BS
 " 上次编辑的位置，ideavim 有 :changes 说明支持 g; g, 命令了。
 nnoremap li :action JumpToLastChange<CR>
-
-
-
-" === m
-" <C-F12>
-nnoremap lm :action FileStructurePopup<CR>
-
 
 " === e
 " <A-Ins>
@@ -92,20 +84,54 @@ nnoremap lt :action Unwrap<CR>
 " Ctrl+Alt+F12 在文件夹中显示
 nnoremap lT :action ShowFilePath<CR>
 
+
 " === w
-" <C-S-i>
-nnoremap lw :action QuickImplementations<CR>
-
 " === y
-" <F9>
-nnoremap ly :action ChooseDebugConfiguration<CR>
-
 " === x
-" 折叠之全部斩开
-nnoremap lx :action ExpandAllRegions<CR>
-
-" === z
 " === q
+" === z
+" === m
+
+
+
+
+
+
+" ============= \ ============= f d u b Z
+"===> a
+" 关闭所有标签页。
+nnoremap <Leader>a :action CloseAllEditors<CR>
+"===> e
+" 关闭其它标签页。
+nnoremap <Leader>e :action CloseAllEditorsButActive<CR>
+"===> w
+" <C-F4> 关闭当前标签页。
+nnoremap <Leader>w :action CloseContent<CR>
+
+
+
+"===> c
+"===> h
+"===> i
+"===> o
+"===> j
+"===> k
+"===> t
+"===> y
+"===> q 
+"===> z
+"===> r
+"===> g
+"===> x
+"===> l
+"===> n
+"===> s
+"===> v
+"===> m
+
+
+
+
 
 
 
@@ -120,15 +146,19 @@ nnoremap [ :action EditorCompleteStatement<CR>a
 "===> a
 " <C-F5>
 nnoremap <Space>a :action Rerun<CR>
-" 停止<C-F2>  
-nnoremap <Space>A :action Stop<CR>
+
+
+
+
+
+
 
 "===> b
 " <C-F8>打上断点 / 取消断点  
 nnoremap <Space>b :action ToggleLineBreakpoint<CR>
 " <A-C-S-F8>临时断点，运行完自动删除断点
 nnoremap <Space>B :action ToggleTemporaryLineBreakpoint<CR>
-"===> j
+"===> f
 " F8
 nnoremap <Space>j :action StepOver<CR>
 
@@ -141,9 +171,6 @@ nnoremap <Space>e :action ViewBreakpoints<CR>
 nnoremap <Space>n :action EditBreakpoint<CR>
 
 
-
-
-
 "===> h
 " F7 进入方法里
 nnoremap <Space>h :action StepInto<CR>
@@ -152,7 +179,7 @@ nnoremap <Space>H :action ForceStepInto<CR>
 "===> o
 " <S-F7> tab 进入到某个特定的方法里。
 nnoremap <Space>o :action SmartStepInto<CR>
-"===> i
+"===> w
 " <S-F8> 从某个方法里退出
 nnoremap <Space>i :action StepOut<CR>
 
@@ -171,108 +198,30 @@ nnoremap <Space>l :action RunToCursor<CR>
 "===> m
 " <F9> 执行到下一个断点。 
 nnoremap <Space>m :action Resume<CR>
-"===> f
+"===> y
 " 禁用断点(运行debug时有效)
 nnoremap <Space>f :action XDebugger.MuteBreakpoints<CR>
 
+" 重新运行断点(降针) Drop Frame
 
+
+"===> z
+"===> j
+"===> i
 "===> q
-"===> s
 "===> p
 "===> r
 "===> t
 "===> u
 "===> v
-"===> w
 "===> x
-"===> y
-"===> z
-
-
-" 重新运行断点(降针) Drop Frame
-
-
-
-
-
-" ============= \ ============= f d u b Z
-"===> a
-" 关闭所有标签页。
-nnoremap <Leader>a :action CloseAllEditors<CR>
-"===> e
-" 关闭其它标签页。
-nnoremap <Leader>e :action CloseAllEditorsButActive<CR>
-" <C-S-A-T> 打开重构窗口
-nnoremap <Leader>E :action Refactorings.QuickListPopupAction<CR>
-"===> w
-" <C-F4> 关闭当前标签页。
-nnoremap <Leader>w :action CloseContent<CR>
-
-
-" 退出
-nnoremap zq :action Exit<CR>
-"===> c
-" <A-C-F7>,<A-F7> 在那些地方用到它了。
-" <A-C-F7>
-nnoremap <Leader>c :action ShowUsages<CR>
-" <A-F7>
-nnoremap <Leader>C :action FindUsages<CR>
-
-
-"===> h
-" Ctrl+Shift+M 在 {} 切换
-nnoremap <Leader>h :action EditorMatchBrace<CR>
-"===> i
-" 实现接口
-nnoremap <Leader>i :action ImplementMethods<CR>
-"===> o
-" 重写方法。
-nnoremap <Leader>o :action OverrideMethods<CR>
-
-
-"===> j
-" <A-7>
-nnoremap <Leader>j :action ActivateStructureToolWindow<CR>
-"===> k  光标最好在那个类上。
-" <A-C-U>
-nnoremap <Leader>k :action ShowUmlDiagramPopup<CR>
-" <A-C-S-U>
-nnoremap <Leader>K :action ShowUmlDiagram<CR>
-
-
-
-"===> t
-" <A-C-T> 环绕 if
-nnoremap <Leader>T :action SurroundWith<CR>
-" <C-F7>
-nnoremap <Leader>t :action FindUsagesInFile<CR>
-
-
-"===> y
-" <C-F9> 编译整个项目
-nnoremap <Leader>y :action CompileDirty<CR>
-" <C-S-F9> 编译所在的这个文件
-nnoremap <Leader>Y :action Compile<CR>
-"===> q
-" 转换激活终端工具窗口
-nnoremap <Leader>q :action ActivateTerminalToolWindow<CR>
-
-"===> z
-" <A-Q>
-nnoremap <Leader>z :action EditorContextInfo<CR>
-"===> p
-nnoremap <Leader>p :action ShowNavBar<CR>
-
-
-
-"===> x
-"===> l
-"===> g
-"===> n
-"===> r
 "===> s
-"===> v
-"===> m
+
+
+
+
+
+
 
 
 

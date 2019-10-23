@@ -227,3 +227,96 @@ nnoremap <Leader>f <C-f>
 nnoremap <Leader>b <C-b>
 nnoremap <Leader>d <C-d>
 nnoremap <Leader>u <C-u>
+
+
+<C-F>
+nnoremap <Space>f :action Find<CR>
+" <F3>
+nnoremap <Space>j :action FindNext<CR>
+" <S-F3>
+nnoremap <Space>i :action FindPrevious<CR>
+
+
+" <A-W> 翻译
+nnoremap <Leader>r :action $EditorTranslateAction<CR>
+" <A-R> 翻译-->替换
+nnoremap <Leader>r :action $TranslateAndReplaceAction<CR>
+" <C-S-S> 翻译-快速窗口
+nnoremap <Space>S :action $ShowInstantTranslationDialogAction<CR>
+" <C-S-O> 翻译窗口 要回车
+nnoremap <Leader>R :action $TranslateTextComponent<CR>
+
+<C-W>
+nnoremap <Space>w :action EditorSelectWord<CR>
+<C-S-W>
+nnoremap <Space>W :action EditorUnSelectWord<CR>
+
+
+" <A-Q>
+nnoremap <Leader>z :action EditorContextInfo<CR>
+"===> p <a-Home>
+nnoremap <Leader>p :action ShowNavBar<CR>
+
+" <A-C-U>
+nnoremap <Leader>k :action ShowUmlDiagramPopup<CR>
+" <A-C-S-U>
+nnoremap <Leader>K :action ShowUmlDiagram<CR>
+
+" <A-7>
+nnoremap <Leader>j :action ActivateStructureToolWindow<CR>
+
+" 重写方法。
+nnoremap <Leader>o :action OverrideMethods<CR>
+" 实现接口
+nnoremap <Leader>i :action ImplementMethods<CR>
+
+" Ctrl+Shift+M 在 {} 切换
+nnoremap <Leader>h :action EditorMatchBrace<CR>
+
+" 退出
+nnoremap zq :action Exit<CR>
+
+" <A-C-F7>,<A-F7> 在那些地方用到它了。
+" <A-C-F7>
+nnoremap <Leader>c :action ShowUsages<CR>
+" <A-F7>
+nnoremap <Leader>C :action FindUsages<CR>
+
+" <C-S-A-T> 打开重构窗口
+nnoremap <Leader>E :action Refactorings.QuickListPopupAction<CR>
+
+" <A-C-T> 环绕 if
+nnoremap <Leader>T :action SurroundWith<CR>
+" <C-F7>
+nnoremap <Leader>t :action FindUsagesInFile<CR>
+
+" <C-F9> 编译整个项目
+nnoremap <Leader>y :action CompileDirty<CR>
+" <C-S-F9> 编译所在的这个文件
+nnoremap <Leader>Y :action Compile<CR>
+
+" <C-F12>转换激活终端工具窗口
+nnoremap <Leader>q :action ActivateTerminalToolWindow<CR>
+
+" <A-F1>
+nnoremap lq :action SelectIn<CR>
+
+" 折叠之全部斩开
+nnoremap lx :action ExpandAllRegions<CR>
+
+" <F9>
+nnoremap ly :action ChooseDebugConfiguration<CR>
+
+" <C-S-i>
+nnoremap lw :action QuickImplementations<CR>
+
+
+" <C-F12>
+nnoremap lm :action FileStructurePopup<CR>
+
+" <C-S-E>
+nnoremap l; :action RecentLocations<CR>
+
+" 停止<C-F2>  
+nnoremap <Space>A :action Stop<CR>
+
