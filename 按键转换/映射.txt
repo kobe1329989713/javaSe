@@ -1,4 +1,45 @@
 
+
+" <C-F8>打上断点 / 取消断点  
+nnoremap <Space>b :action ToggleLineBreakpoint<CR>
+" <A-C-S-F8>临时断点，运行完自动删除断点
+nnoremap <Space>B :action ToggleTemporaryLineBreakpoint<CR>
+
+
+" F8
+nnoremap <Space>j :action StepOver<CR>
+" <C-S-F8> 取消所有(某些)断点和查看断点
+nnoremap <Space>e :action ViewBreakpoints<CR>
+
+" <C-S-F8> 编辑断点,加条件
+nnoremap <Space>n :action EditBreakpoint<CR>
+" F7 进入方法里
+nnoremap <Space>h :action StepInto<CR>
+" <A-S-F7> 强力进入某个方法里
+nnoremap <Space>H :action ForceStepInto<CR>
+
+" <S-F7> tab 进入到某个特定的方法里。
+nnoremap <Space>o :action SmartStepInto<CR>
+
+" <S-F8> 从某个方法里退出
+nnoremap <Space>i :action StepOut<CR>
+
+" <A-F10> 回到断点(无论在那里都回到执行那一步断点)
+nnoremap <Space>g :action ShowExecutionPoint<CR>
+" <A-F8>计算表达式，选中它，在按
+nnoremap <Space>k :action EvaluateExpression<CR>
+" <A-F9>执行到光标所在行
+nnoremap <Space>l :action RunToCursor<CR>
+" <F9> 执行到下一个断点。 
+nnoremap <Space>m :action Resume<CR>
+" 禁用断点(运行debug时有效)
+nnoremap <Space>f :action XDebugger.MuteBreakpoints<CR>
+
+" 重新运行断点(降针) Drop Frame
+
+
+
+
 " 特殊字符、大写，各种组合
 " : 用 ctrl+r  + * 1 -   等这些符号来粘贴
 

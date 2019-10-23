@@ -109,32 +109,6 @@ nnoremap <Leader>e :action CloseAllEditorsButActive<CR>
 nnoremap <Leader>w :action CloseContent<CR>
 
 
-
-"===> c
-"===> h
-"===> i
-"===> o
-"===> j
-"===> k
-"===> t
-"===> y
-"===> q 
-"===> z
-"===> r
-"===> g
-"===> x
-"===> l
-"===> n
-"===> s
-"===> v
-"===> m
-
-
-
-
-
-
-
 " ============= 空格 ============= c d  Z
 " <C-S-F10>   加Space(空格)
 nnoremap <Space>cr :action RunClass<CR>
@@ -147,116 +121,12 @@ nnoremap [ :action EditorCompleteStatement<CR>a
 " <C-F5>
 nnoremap <Space>a :action Rerun<CR>
 
-
-
-
-
-
-
-"===> b
-" <C-F8>打上断点 / 取消断点  
-nnoremap <Space>b :action ToggleLineBreakpoint<CR>
-" <A-C-S-F8>临时断点，运行完自动删除断点
-nnoremap <Space>B :action ToggleTemporaryLineBreakpoint<CR>
-"===> f
-" F8
-nnoremap <Space>j :action StepOver<CR>
-
-
-"===> e
-" <C-S-F8> 取消所有(某些)断点和查看断点
-nnoremap <Space>e :action ViewBreakpoints<CR>
-"===> n
-" <C-S-F8> 编辑断点,加条件
-nnoremap <Space>n :action EditBreakpoint<CR>
-
-
-"===> h
-" F7 进入方法里
-nnoremap <Space>h :action StepInto<CR>
-" <A-S-F7> 强力进入某个方法里
-nnoremap <Space>H :action ForceStepInto<CR>
-"===> o
-" <S-F7> tab 进入到某个特定的方法里。
-nnoremap <Space>o :action SmartStepInto<CR>
-"===> w
-" <S-F8> 从某个方法里退出
-nnoremap <Space>i :action StepOut<CR>
-
-
-"===> g
-" <A-F10> 回到断点(无论在那里都回到执行那一步断点)
-nnoremap <Space>g :action ShowExecutionPoint<CR>
-"===> k
-" <A-F8>计算表达式，选中它，在按
-nnoremap <Space>k :action EvaluateExpression<CR>
-
-
-"===> l
-" <A-F9>执行到光标所在行
-nnoremap <Space>l :action RunToCursor<CR>
-"===> m
-" <F9> 执行到下一个断点。 
-nnoremap <Space>m :action Resume<CR>
-"===> y
-" 禁用断点(运行debug时有效)
-nnoremap <Space>f :action XDebugger.MuteBreakpoints<CR>
-
-" 重新运行断点(降针) Drop Frame
-
-
-"===> z
-"===> j
-"===> i
-"===> q
-"===> p
-"===> r
-"===> t
-"===> u
-"===> v
-"===> x
-"===> s
-
-
-
-
-
-
-
-
-
 " ============= g =============
 " <A-C-Left> 上一次编辑地方
 nnoremap g; :action Back<CR>
 " <A-C-Right> 下一次编辑地方
 nnoremap g, :action Forward<CR>
 
-" === a
-" === b
-" === c
-" === d
-" === e
-" === f
-" === g
-" === h
-" === i
-" === j
-" === k
-" === l
-" === m
-" === n
-" === o
-" === p
-" === q
-" === r
-" === s
-" === t
-" === u
-" === v
-" === w
-" === x
-" === y
-" === z
 
 
 " ============= t 开关组成命令 ============= l
@@ -264,56 +134,4 @@ nnoremap g, :action Forward<CR>
 nnoremap tn gt
 nnoremap tp gT
 
-" === a
-" === b
-" === c
-" === d
-" === e
-" === f
-" === g
-" === h
-" === i
-" === j
-" === k
-" === l
-" === m
-" === o
-" === q
-" === r
-" === s
-" === t
-" === u
-" === v
-" === w
-" === x
-" === y
-" === z
-
 " ============= z 开关组成命令 =============
-
-" === a
-" === b
-" === c
-" === d
-" === e
-" === f
-" === g
-" === h
-" === i
-" === j
-" === k
-" === l
-" === m
-" === n
-" === o
-" === p
-" === q
-" === r
-" === s
-" === t
-" === u
-" === v
-" === w
-" === x
-" === y
-" === z
