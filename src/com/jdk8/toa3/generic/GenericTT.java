@@ -9,6 +9,9 @@ import java.util.List;
  * <br/>
  * Description:
  * <T> T表示返回值是一个泛型，传递啥 ，就返回啥类型的数据，
+ *
+ * 泛型通配符，在写方法那里、在调用那里。这两个地方。
+ * ？extends xx 下界，？super xx 上界
  */
 public class GenericTT<T> {
 
