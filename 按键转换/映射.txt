@@ -361,3 +361,7 @@ nnoremap l; :action RecentLocations<CR>
 " 停止<C-F2>  
 nnoremap <Space>A :action Stop<CR>
 
+" <A-Up> alt+ 上下光标 下
+nnoremap ln :action MethodDown<CR>
+" <A-Up> alt+ 上下光标 上
+nnoremap lN :action MethodUp<CR>

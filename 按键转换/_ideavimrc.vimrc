@@ -47,11 +47,6 @@ nnoremap la :action HideAllWindows<CR>
 " <F12> 返回上一个窗口。
 nnoremap lc :action JumpToLastWindow<CR>
 
-" <A-Up> alt+ 上下光标 下
-nnoremap ln :action MethodDown<CR>
-" <A-Up> alt+ 上下光标 上
-nnoremap lN :action MethodUp<CR>
-
 " <F2>
 nnoremap lo :action GotoNextError<CR>
 " <S-F2>
@@ -85,6 +80,7 @@ nnoremap lt :action Unwrap<CR>
 nnoremap lT :action ShowFilePath<CR>
 
 
+" === n
 " === w
 " === y
 " === x
