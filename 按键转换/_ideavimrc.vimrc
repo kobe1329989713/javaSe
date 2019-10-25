@@ -40,6 +40,9 @@ nnoremap lb <C-b>
 nnoremap ld <C-d>
 nnoremap lu <C-u>
 
+" vim <C-V>
+nnoremap lV <C-v>
+
 
 
 " <C-S-F12> 全屏,与返回
@@ -47,12 +50,16 @@ nnoremap la :action HideAllWindows<CR>
 " <F12> 返回上一个窗口。
 nnoremap lc :action JumpToLastWindow<CR>
 
+"===> a
+" 关闭所有标签页。
+nnoremap lA :action CloseAllEditors<CR>
+
 " <F2>
 nnoremap lo :action GotoNextError<CR>
 " <S-F2>
-nnoremap lO :action GotoPreviousError<CR>
+nnoremap lp :action GotoPreviousError<CR>
 " <C-F1>
-nnoremap lp :action ShowErrorDescription<CR>
+nnoremap lO :action ShowErrorDescription<CR>
 
 " <C-E> <C-Tab>要多按下 <CR>==回车
 nnoremap K :action RecentFiles<CR>
@@ -66,43 +73,42 @@ nnoremap li :action JumpToLastChange<CR>
 " === e
 " <A-Ins>
 nnoremap le :action Generate<CR>
+"===> e
+" 关闭其它标签页。
+nnoremap lE :action CloseAllEditorsButActive<CR>
 
 " === r
 " <A-C-L>格式化代码
 nnoremap lr :action ReformatCode<CR>
 " <C-A-O>
 nnoremap lR :action OptimizeImports<CR>
-
-" === t
 " <C-S-Del> ,删除 if 循环 () {} 里面的东东。
-nnoremap lt :action Unwrap<CR>
-" Ctrl+Alt+F12 在文件夹中显示
-nnoremap lT :action ShowFilePath<CR>
-
-
-" === n
-" === w
-" === y
-" === x
-" === q
-" === z
-" === m
+nnoremap lD :action Unwrap<CR>
 
 
 
 
+" <C-S-i>
+nnoremap lw :action QuickImplementations<CR>
+"===> w
+" <C-F4> 关闭当前标签页。
+nnoremap lW :action CloseContent<CR>
+" <F9>
+nnoremap ly :action ChooseDebugConfiguration<CR>
+
+" <C-F12>
+nnoremap lm :action FileStructurePopup<CR>
+" <A-Up> alt+ 上下光标 下
+nnoremap ln :action MethodDown<CR>
+" <A-Up> alt+ 上下光标 上
+nnoremap lz :action MethodUp<CR>
+
+
+" 小写t，q  x
 
 
 " ============= \ ============= f d u b Z
-"===> a
-" 关闭所有标签页。
-nnoremap <Leader>a :action CloseAllEditors<CR>
-"===> e
-" 关闭其它标签页。
-nnoremap <Leader>e :action CloseAllEditorsButActive<CR>
-"===> w
-" <C-F4> 关闭当前标签页。
-nnoremap <Leader>w :action CloseContent<CR>
+
 
 
 " ============= 空格 ============= c d  Z
@@ -110,12 +116,13 @@ nnoremap <Leader>w :action CloseContent<CR>
 nnoremap <Space>cr :action RunClass<CR>
 " <S-F9>
 nnoremap <Space>dr :action Debug<CR>
-" <C-S-CR>
-nnoremap [ :action EditorCompleteStatement<CR>a
-
 "===> a
 " <C-F5>
 nnoremap <Space>a :action Rerun<CR>
+" <C-S-CR>
+nnoremap [ :action EditorCompleteStatement<CR>a
+
+
 
 " ============= g =============
 " <A-C-Left> 上一次编辑地方
