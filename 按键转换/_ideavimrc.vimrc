@@ -110,6 +110,9 @@ nnoremap lz :action MethodUp<CR>
 " ============= \ ============= f d u b Z
 " <A-C-S-S> 项目设置
 nnoremap <Leader>a :action ShowProjectStructureSettings<CR>
+" <A-C-S-Ins> 创建临时文件。
+nnoremap <Leader>A :action NewScratchFile<CR>
+
 
 
 " ============= 空格 ============= c d  Z
