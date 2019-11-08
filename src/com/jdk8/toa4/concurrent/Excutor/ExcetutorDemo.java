@@ -9,6 +9,11 @@ import java.util.concurrent.*;
  * <br/>
  * Description:
  * Exceutor 线程池。
+ *
+ *
+ *         // Java获取可用处理器的数目
+ *         int PROCESSORS = Runtime.getRuntime().availableProcessors();
+ *         System.out.println("PROCESSORS: " + PROCESSORS);
  */
 @SuppressWarnings("all")
 public class ExcetutorDemo {
