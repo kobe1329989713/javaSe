@@ -40,7 +40,6 @@ nnoremap <Leader>jk :action UnselectPreviousOccurrence<CR>
 
 
 
-
 " <F2>
 " vnoremap n :action GotoNextError<CR>
 " <S-F2>

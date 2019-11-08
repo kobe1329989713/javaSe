@@ -118,6 +118,8 @@ nnoremap <Leader>l <C-W>l
 " 关闭分屏。
 nnoremap <Leader>w <C-W>c
 
+" 显示历史 action LocalHistory.ShowSelectionHistory
+nnoremap <Leader>b :action LocalHistory.ShowHistory<CR>
 
 " ============= g =============
 " <A-C-Left> 上一次编辑地方
