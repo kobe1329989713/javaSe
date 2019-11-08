@@ -24,8 +24,7 @@ nnoremap Y y$
 
 
 
-
-" ============= 空格 ============= hl jk sv t
+" ============= 空格 ============= hl nz sv 
 " <C-S-F10>   加Space(空格)
 nnoremap <Space>cr :action RunClass<CR>
 " <S-F9>
@@ -36,7 +35,8 @@ nnoremap <Space>a :action Rerun<CR>
 " <C-S-CR>
 nnoremap [ :action EditorCompleteStatement<CR>a
 
-
+" 显示右键菜单
+nnoremap <Space>t :action ShowPopupMenu
 
 
 "===> a
@@ -88,9 +88,9 @@ nnoremap <Space>y :action ChooseDebugConfiguration<CR>
 " <C-F12>
 nnoremap <Space>m :action FileStructurePopup<CR>
 " <A-Up> alt+ 上下光标 下
-nnoremap <Space>n :action MethodDown<CR>
+nnoremap <Space>j :action MethodDown<CR>
 " <A-Up> alt+ 上下光标 上
-nnoremap <Space>z :action MethodUp<CR>
+nnoremap <Space>k :action MethodUp<CR>
 
 
 
@@ -115,6 +115,8 @@ nnoremap <Leader>j <C-W>j
 nnoremap <Leader>k <C-W>k
 nnoremap <Leader>h <C-W>h
 nnoremap <Leader>l <C-W>l
+" 关闭分屏。
+nnoremap <Leader>w <C-W>c
 
 
 " ============= g =============
@@ -210,14 +212,11 @@ nnoremap mu :action HideAllWindows<CR>
 nnoremap mv :action JumpToLastWindow<CR>
 
 " <C-S-E>
-nnoremap mw :action RecentLocations<CR>
+nnoremap my :action RecentLocations<CR>
 
 
-" y
-" z
-
-
-
+" <C-S-M>
+nnoremap mz :action EditorMatchBrace<CR>
 
 " ============= q =============
 " 向下
@@ -225,8 +224,26 @@ nnoremap qf <C-f>
 nnoremap qb <C-b>
 nnoremap qd <C-d>
 nnoremap qu <C-u>
+" 行首与行尾
+nnoremap qh ^
+nnoremap ql $
+
+" 重命名元素
+nnoremap qm :action RenameElement<CR>
+" 重命名文件
+nnoremap qM :action RenameFile<CR>
+
+" ctrl+ 上下光标 移动时，光标不会动，ctrl+m 又回到那一行上。
+nnoremap qj :action EditorScrollUp<CR>
+nnoremap qk :action EditorScrollDown<CR>
+" <C-M>
+nnoremap qn :action EditorScrollToCenter<CR>
 
 
+" <A-C-S-C>复制引用路径
+nnoremap qc :action CopyReference<CR>
+" <C-S-C>复制在文件夹路径
+nnoremap qC :action CopyPaths<CR>
 
 " ============= z =============
 

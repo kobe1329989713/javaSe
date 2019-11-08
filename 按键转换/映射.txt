@@ -161,10 +161,7 @@ nnoremap <Leader>jk :action UnselectPreviousOccurrence<CR>
 " nnoremap <Leader>rc :action RunToCursor<CR>
 " 选择运行配置
 " nnoremap <Leader>rC :action ChooseRunConfiguration<CR>
-" 重命名元素
-" nnoremap <Leader>re :action RenameElement<CR>
-" 重命名文件
-" nnoremap <Leader>rf :action RenameFile<CR>
+
 " 重新运行
 " nnoremap <Leader>rr :action Rerun<CR>
 " 到处寻找
@@ -192,12 +189,8 @@ nnoremap <Leader>jk :action UnselectPreviousOccurrence<CR>
 " <C-B> == <C-]>
 " nnoremap <Leader>b :action GotoDeclaration<CR>
 " nnoremap ;ee :action ToggleChangedOnlyFiles<CR>
-" 之前插入的位置 ctrl+i/o
-" nnoremap g; :action Back<CR>
-" nnoremap g, :action Forward<CR>
-" ctrl+ 上下光标 移动时，光标不会动，ctrl+m 又回到那一行上。
-" nnoremap zk :action EditorScrollUp<CR>
-" nnoremap zj :action EditorScrollDown<CR>
+
+
 
 
 
@@ -218,21 +211,6 @@ vnoremap c :action ShowNavBar<CR><ESC>
 
 
 
-" split分屏
-nnoremap <Space>ws <C-W>s
-nnoremap <Space>wv <C-W>v
-" 移动到窗口  ##
-nnoremap <Space>wj <C-W>j
-nnoremap <Space>wk <C-W>k
-nnoremap <Space>wh <C-W>h
-nnoremap <Space>wl <C-W>l
-
-
-
-nnoremap <Leader>f <C-f>
-nnoremap <Leader>b <C-b>
-nnoremap <Leader>d <C-d>
-nnoremap <Leader>u <C-u>
 
 
 <C-F>
@@ -242,15 +220,6 @@ nnoremap <Space>j :action FindNext<CR>
 " <S-F3>
 nnoremap <Space>i :action FindPrevious<CR>
 
-
-" <A-W> 翻译
-nnoremap <Leader>r :action $EditorTranslateAction<CR>
-" <A-R> 翻译-->替换
-nnoremap <Leader>r :action $TranslateAndReplaceAction<CR>
-" <C-S-S> 翻译-快速窗口
-nnoremap <Space>S :action $ShowInstantTranslationDialogAction<CR>
-" <C-S-O> 翻译窗口 要回车
-nnoremap <Leader>R :action $TranslateTextComponent<CR>
 
 <C-W>
 nnoremap <Space>w :action EditorSelectWord<CR>
@@ -273,8 +242,7 @@ nnoremap <Leader>o :action OverrideMethods<CR>
 " 实现接口
 nnoremap <Leader>i :action ImplementMethods<CR>
 
-" Ctrl+Shift+M 在 {} 切换
-nnoremap <Leader>h :action EditorMatchBrace<CR>
+
 
 " 退出
 nnoremap zq :action Exit<CR>
