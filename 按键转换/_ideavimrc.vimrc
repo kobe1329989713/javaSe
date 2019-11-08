@@ -105,6 +105,7 @@ nnoremap <Leader>a :action ShowProjectStructureSettings<CR>
 nnoremap <Leader>A :action NewScratchFile<CR>
 " vim <C-V>
 nnoremap <Leader>v <C-v>
+nnoremap <Leader>c :action ExpandAllRegions<CR>
 
 " split分屏 
 nnoremap <Leader>s <C-W>s  
