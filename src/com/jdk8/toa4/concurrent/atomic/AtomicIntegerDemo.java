@@ -11,6 +11,10 @@ import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
  * <br/>
  * Description:
  * 原子操作 基本原理。
+ *
+ * 你是想要先计算在获取值呢？
+ * 还是
+ * 先计算 在获取值。
  */
 public class AtomicIntegerDemo {
     public static void main(String[] args) {
