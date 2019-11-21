@@ -17,6 +17,7 @@ public class LockDemo {
      * 看下面 test() 方法，它在锁中的代码 又加锁。
      * 本来会曹成死锁的。但是你用的是  ReentrantLock 它是可重入锁(重复用)
      * 所以不会出现该问题。重点看代码。
+     * 还是让它胡顺序的执行。
      */
     // 锁。
     Lock lock = new ReentrantLock();
