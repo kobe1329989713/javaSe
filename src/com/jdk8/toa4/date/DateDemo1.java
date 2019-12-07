@@ -11,6 +11,7 @@ import java.util.Date;
  * Description:
  * jdk8 以前处理 日期 时间的 方式。
  * 它有一定的局限性，所以就有了新的 日期 时间 api 了。
+ * 那个时间在前，那个时间在后，画时间线，来看。
  */
 public class DateDemo1 {
 
