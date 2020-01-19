@@ -1,6 +1,8 @@
 
 
+" source D:\kobe\idea\ideaProjects\space01\javaSE01\theKeyTransformation\_ideavimrc.vimrc
 " set keep-english-in-normal-and-restore-in-insert
+
 set nowrapscan " 禁止在搜索到文件两端时重新搜索
 set hlsearch " 搜索时显示高亮
 set incsearch
