@@ -153,6 +153,8 @@ nnoremap g; :action Back<CR>
 " <A-C-Right> 下一次编辑地方
 nnoremap g, :action Forward<CR>
 
+" <C-S-A>
+nnoremap ga :action GotoAction<CR>
 
 
 " ============= m =============

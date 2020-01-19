@@ -124,7 +124,7 @@ nnoremap <Leader>jk :action UnselectPreviousOccurrence<CR>
 " nnoremap <Leader>bb :action ToggleLineBreakpoint<CR>
 " 查看断点
 " nnoremap <Leader>br :action ViewBreakpoints<CR>
-" ctrl+shift+a
+" <C-S-A>
 " nnoremap ga :action GotoAction<CR>
 " ctrl+shift+n
 " nnoremap gf :action GotoFile<CR>
