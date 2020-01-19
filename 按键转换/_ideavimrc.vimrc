@@ -1,6 +1,6 @@
 
 
-set keep-english-in-normal-and-restore-in-insert
+" set keep-english-in-normal-and-restore-in-insert
 set nowrapscan " 禁止在搜索到文件两端时重新搜索
 set hlsearch " 搜索时显示高亮
 set incsearch
@@ -245,7 +245,7 @@ nnoremap qn :action EditorScrollToCenter<CR>
 " <A-C-S-C>复制引用路径
 nnoremap qc :action CopyReference<CR>
 " <C-S-C>复制在文件夹路径
-nnoremap qC :action CopyPaths<CR>
+nnoremap qC :action CopyAbsolutePath<CR>
 
 " ============= z =============
 
