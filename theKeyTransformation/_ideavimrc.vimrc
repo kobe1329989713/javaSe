@@ -102,8 +102,8 @@ nnoremap <Leader>A :action ShowProjectStructureSettings<CR>
 nnoremap <Leader>a :action ShowSettings<CR>
 " <A-C-S-Ins> 创建临时文件。
 nnoremap <Leader>B :action NewScratchFile<CR>
-" vim <C-V>
-nnoremap <Leader>v <C-v>
+" 显示历史 action LocalHistory.ShowSelectionHistory
+nnoremap <Leader>b :action LocalHistory.ShowHistory<CR>
 " 折叠之全部斩开
 nnoremap <Leader>c :action ExpandAllRegions<CR>
 
@@ -118,8 +118,34 @@ nnoremap <Leader>l <C-W>l
 " 关闭分屏。
 nnoremap <Leader>w <C-W>c
 
-" 显示历史 action LocalHistory.ShowSelectionHistory
-nnoremap <Leader>b :action LocalHistory.ShowHistory<CR>
+" vim <C-V>
+nnoremap <Leader>y <C-v>
+
+" d
+" 新建请求 xx.http 请求测试文件。
+nnoremap <Leader>D :action HTTP.Request.NewFile<CR>
+" 在请求测试文件新增请求。
+nnoremap <Leader>d :action HTTPClient.AddRequest<CR>
+
+
+" e
+" f
+" g
+" i
+" m
+" n
+" o
+" p
+" q
+" r
+" t
+" u
+" x
+" z
+
+
+
+
 
 " ============= g =============
 " <A-C-Left> 上一次编辑地方
