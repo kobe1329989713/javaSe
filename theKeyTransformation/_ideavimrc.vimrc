@@ -145,7 +145,10 @@ nnoremap <Leader>d :action HTTPClient.AddRequest<CR>
 " x
 " z
 
-
+" ============= Shift =============
+" 左右切换页面
+nnoremap <S-J> :action PreviousTab<CR>
+nnoremap <S-K> :action NextTab<CR>
 
 
 
