@@ -6,7 +6,7 @@
       "passKeys": ""
     }
   ],
-  "filterLinkHints": false,
+  "filterLinkHints": true,
   "waitForEnterForFilteredHints": true,
   "hideHud": false,
   "keyMappings": "# 快速打开google 搜索窗口\nmap go Vomnibar.activate keyword=g\n\n\n# 关闭左边标签页\nmap <Space>h closeTabsOnLeft\n# 关闭右边标签页\nmap <Space>l closeTabsOnRight\n# 关闭其它标签页\nmap <Space>a closeOtherTabs\n\n\n# 向下滚动整页（向下滚动整页）\nmap ah scrollFullPageDown\n\n# 向上滚动整页\nmap ag scrollFullPageUp\n\n\n# 将下一个键传递到页\nmap aa passNextKey\n\n# 在新选项卡中打开链接并切换到它\nmap ab LinkHints.activateModeToOpenInNewForegroundTab\n\n# 下载链接url\nmap ac LinkHints.activateModeToDownloadLink\n\n\n# 在新选项卡中打开书签\nmap ad Vomnibar.activateBookmarksInNewTab\n\n# 在“匿名”窗口中打开链接\nmap ae LinkHints.activateModeToOpenIncognito",
@@ -15,11 +15,11 @@
   "newTabUrl": "about:newtab",
   "nextPatterns": "next,more,newer,>,›,→,»,≫,>>",
   "previousPatterns": "prev,previous,back,older,<,‹,←,«,≪,<<",
-  "regexFindMode": false,
-  "ignoreKeyboardLayout": false,
+  "regexFindMode": true,
+  "ignoreKeyboardLayout": true,
   "scrollStepSize": 60,
   "smoothScroll": true,
-  "grabBackFocus": false,
+  "grabBackFocus": true,
   "searchEngines": "# 自定义的搜索引擎\n\n# l: https://www.google.com/search?q=%s&btnI I'm feeling lucky...\n\n# gm: https://www.google.com/maps?q=%s Google maps\n\n#  维基百科搜索。\nw: https://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia\n\ng: https://www.google.com/search?q=%s Google\ny: https://www.youtube.com/results?search_query=%s Youtube\n\nb: https://www.baidu.com/s?wd=%s 百度\nbi: https://www.bing.com/search?q=%s Bing\n\nzh: https://www.zhihu.com/search?type=content&q=%s 知乎\ntb https://s.taobao.com/search?q=%s 淘宝\njd https://search.jd.com/Search?keyword=%s 京东\nbz https://search.bilibili.com/all?keyword=%s b站\naqy https://so.iqiyi.com/so/q_%s 爱奇艺\ntm https://list.tmall.com/search_product.htm?q=%s 天猫\nyk https://so.youku.com/search_video/q_%s 优酷\ndb https://www.douban.com/search?q=%s 豆瓣",
   "searchUrl": "https://www.baidu.com/s?wd=",
   "userDefinedLinkHintCss": "div > .vimiumHintMarker {\n/* linkhint boxes */\nbackground: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFF785),\n  color-stop(100%,#FFC542));\nborder: 1px solid #E3BE23;\n}\n\ndiv > .vimiumHintMarker span {\n/* linkhint text */\ncolor: black;\nfont-weight: bold;\nfont-size: 12px;\n}\n\ndiv > .vimiumHintMarker > .matchingCharacter {\n}"
