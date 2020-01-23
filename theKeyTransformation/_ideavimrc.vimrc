@@ -108,6 +108,8 @@ nnoremap <Leader>B :action NewScratchFile<CR>
 nnoremap <Leader>b :action LocalHistory.ShowHistory<CR>
 " 折叠之全部斩开
 nnoremap <Leader>c :action ExpandAllRegions<CR>
+" e 拉取 gitHub gitee 的窗口
+nnoremap <Leader>C :action ProjectFromVersionControlAction<CR>
 
 " split分屏 
 nnoremap <Leader>s <C-W>s  
@@ -130,7 +132,8 @@ nnoremap <Leader>D :action HTTP.Request.NewFile<CR>
 nnoremap <Leader>d :action HTTPClient.AddRequest<CR>
 
 
-" e
+
+
 " f
 " g
 " i
