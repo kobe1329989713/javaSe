@@ -6,7 +6,7 @@
 ; 在当前目录添加 custom.ahk文件，内容如下：
 ;
 ; <MyLabel1>:
-;     对应功能
+;     对应功能2
 ; return
 ;
 ; <MyLabel2>:
