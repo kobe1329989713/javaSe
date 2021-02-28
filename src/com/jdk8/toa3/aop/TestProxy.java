@@ -9,7 +9,7 @@ import java.lang.reflect.Proxy;
  *
  * @author kobe
  * <br/>
- * Description:  代理，一个方法 之前 之后 之出错 之环绕
+ * Description:  代理，一个方法 之前 之后 之出错 之环绕   变量
  */
 interface Fiying {
     void m1();
